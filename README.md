@@ -1,4 +1,4 @@
-## 🛠️ Tech stack
+## `Tech stack`
 
 <p align="center">
   <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&logoColor=white">
@@ -15,7 +15,7 @@
   <img src="https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white">
 </p>
 
-## 📫 How to reach me
+## `Contact`
 
 <p align="center">
   <a href="https://www.linkedin.com/in/victor-abuchi-06b086338"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"></a>
