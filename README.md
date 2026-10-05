@@ -1,13 +1,6 @@
-<h1 align="center">Hi, I'm Victor 👋</h1>
-
 <p align="center">
   Full-stack &amp; mobile developer in Finland, building products that solve real problems:<br>
   student housing, e-commerce automation, and crypto payments.
-</p>
-
-<p align="center">
-  <a href="https://victorabuchi.com"><img src="https://img.shields.io/badge/Website-victorabuchi.com-111827?style=for-the-badge&logo=safari&logoColor=white"></a>
-  <a href="mailto:contact@victorabuchi.com"><img src="https://img.shields.io/badge/Email-contact@victorabuchi.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"></a>
 </p>
 
 ---
@@ -42,15 +35,13 @@
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
 </p>
 
-## 📊 GitHub stats
+## 📫 How to reach me
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=victorabuchi&show_icons=true&theme=github_dark&hide_border=true&count_private=true">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=victorabuchi&layout=compact&theme=github_dark&hide_border=true">
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=victorabuchi&theme=github-dark&hide_border=true">
+  <a href="https://www.linkedin.com/in/victor-abuchi-06b086338"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"></a>
+  <a href="mailto:contact@victorabuchi.com"><img src="https://img.shields.io/badge/-Email-EA4335?style=flat&logo=gmail&logoColor=white"></a>
+  <a href="https://victorabuchi.com"><img src="https://img.shields.io/badge/-Website-111827?style=flat&logo=safari&logoColor=white"></a>
+  <a href="https://github.com/victorabuchi"><img src="https://img.shields.io/badge/-GitHub-444444?style=flat&logo=github"></a>
 </p>
 
 ---
