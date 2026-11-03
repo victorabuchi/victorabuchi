@@ -4823,3 +4823,7 @@ footer {
     transform: none;
   }
 }
+
+.case-study-note {
+  color: var(--color-ink-soft);
+}
