@@ -3,10 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Five things a berry farm taught me about building software | Victor Abuchi</title>
+  <title>What 300 berry pickers taught me about building software | Victor Abuchi</title>
+  <meta name="description" content="I built the payroll and timesheet system for a Finnish berry farm with 300+ seasonal workers in 5 languages. The paper forms, the one calculation that had to be right, and what I would keep.">
+  <link rel="canonical" href="https://victorabuchi.com/blog/what-rannikon-taught-me/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What 300 berry pickers taught me about building software">
+  <meta property="og:description" content="Payroll software for a Finnish berry farm: four paper forms, five languages, and one calculation that could not be wrong.">
+  <meta property="og:url" content="https://victorabuchi.com/blog/what-rannikon-taught-me/">
+  <meta property="og:image" content="https://victorabuchi.com/assets/images/rannikon/v2/og-rannikon.jpg">
+  <meta property="og:site_name" content="Victor Abuchi">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What 300 berry pickers taught me about building software">
+  <meta name="twitter:description" content="Payroll software for a Finnish berry farm: four paper forms, five languages, and one calculation that could not be wrong.">
+  <meta name="twitter:image" content="https://victorabuchi.com/assets/images/rannikon/v2/og-rannikon.jpg">
   <link rel="alternate" hreflang="en" href="https://victorabuchi.com/blog/what-rannikon-taught-me/">
   <link rel="alternate" hreflang="fi" href="https://victorabuchi.com/fi/blog/what-rannikon-taught-me/">
   <link rel="alternate" hreflang="x-default" href="https://victorabuchi.com/blog/what-rannikon-taught-me/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"What 300 berry pickers taught me about building software people can't opt out of","description":"I built the payroll and timesheet system for a Finnish berry farm with 300+ seasonal workers in 5 languages. The paper forms, the one calculation that had to be right, and what I would keep.","image":"https://victorabuchi.com/assets/images/rannikon/v2/og-rannikon.jpg","datePublished":"2026-09-20","dateModified":"2026-11-03","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://victorabuchi.com/blog/what-rannikon-taught-me/"},"author":{"@type":"Person","name":"Victor Abuchi","url":"https://victorabuchi.com","sameAs":["https://github.com/victorabuchi","https://www.linkedin.com/in/victor-abuchi-06b086338"]},"publisher":{"@type":"Person","name":"Victor Abuchi","url":"https://victorabuchi.com"},"about":["Payroll software","Timesheet systems","Next.js","React Native","Multilingual software"]}</script>
   <script>(function(){var t=null;try{t=localStorage.getItem('theme')}catch(e){}if(!t){var m=document.cookie.match(/(?:^|; )theme=(light|dark)/);t=m&&m[1]}if(t==='light'||t==='dark')document.documentElement.dataset.theme=t})()</script>
   <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -41,22 +54,123 @@
     <article class="case-study">
       <a href="/blog/" class="case-study-back">Back to Blog</a>
       <div class="case-study-header">
-        <h1 class="case-study-title">Five things a berry farm taught me about building software</h1>
-        <p class="case-study-subtitle">20 September 2026 · 3 min read</p>
+        <h1 class="case-study-title">What 300 berry pickers taught me about building software people can't opt out of</h1>
+        <p class="case-study-subtitle">20 September 2026, updated 3 November 2026 &middot; 8 min read</p>
       </div>
       <div class="case-study-body">
-        <p>I built a timesheet system for a berry farm in Halikko, Finland. Over 300 seasonal workers use it now, in five languages. It was the first time I built something for people who have no choice but to rely on it, and I got a few things wrong along the way. These are the lessons I would keep.</p>
-        <h3 class="case-study-subhead">1. Talk to the people who use it first</h3>
-        <p>The formula for calculating hours changed several times, and every change came from something a worker or someone in payroll told me. I could not get it right until I understood the paper forms they had used for years.</p>
-        <h3 class="case-study-subhead">2. Keep the calculation in one place</h3>
-        <p>Early on, the frontend had its own copy of the formula, and it slowly drifted away from the backend. That caused a real bug. Now the calculation lives only on the backend, so every phone shows the same result.</p>
-        <h3 class="case-study-subhead">3. Build for where people really are</h3>
-        <p>Workers open the app in fields with poor signal, on cheap Android phones, in languages other than English. Every decision had to work under those conditions, not on my laptop.</p>
-        <h3 class="case-study-subhead">4. Start simple</h3>
-        <p>It began as a basic timesheet calculator. Batch recording for supervisors, payroll verification and the berry-picking form were all added because someone asked for them.</p>
-        <h3 class="case-study-subhead">5. Meet people in person</h3>
-        <p>The project moved forward because I sat down with Lina, Aleksi and Johanna, not because of emails and messages.</p>
-        <p>Before Rannikon, workers filled in four paper forms by hand and payroll spent days checking them. Now that check takes minutes. The full write-up, with screenshots, is in the case study. <a href="/case-studies/rannikon/">Read the case study</a>.</p>
+        <p>Most software has a back door. If the app annoys you, you close the tab. If the checkout is slow, you buy somewhere else. Rannikon Puutarha is a berry farm in Halikko, Southwest Finland, and the software I built for it has no back door. If my hours calculation is wrong, somebody who picked strawberries for eleven hours gets paid for nine. They cannot switch to a competitor. They just get less money.</p>
+
+        <p>Over 300 seasonal workers use the system every season, spread across six house groups, in five languages: English, Ukrainian, Khmer, Vietnamese and Nepali. Most of them are from Ukraine, Cambodia, Vietnam and Nepal. Most of them will never read a release note. This is what building that taught me.</p>
+
+        <h3 class="case-study-subhead">The software had to lose an argument with a piece of paper</h3>
+
+        <p>Before I wrote a line of code, Rannikon ran on four paper forms, and every one of them had rules that had been negotiated over years:</p>
+
+        <ul>
+          <li><strong>The white paper</strong> &mdash; work paid by the hour.</li>
+          <li><strong>The orange paper</strong> &mdash; extrawork, capped at 3 hours per day Monday to Friday, 11 hours on a Saturday.</li>
+          <li><strong>The weekly summary</strong> &mdash; Monday to Sunday totals, capped at 17 extra hours a week, with a signature line where the worker confirms they <em>want</em> the extra hours.</li>
+          <li><strong>The green paper</strong> &mdash; berry picking, recorded in kilograms rather than hours.</li>
+        </ul>
+
+        <p>My instinct as a developer was to simplify this. One clean table, one total, done. That instinct was wrong. Those four forms are what payroll audits against and what a labour inspector would ask for. The caps are not UI decisions I get to make; they are the terms people work under.</p>
+
+        <p>So the app does not replace the forms. It produces them &mdash; the same four documents, same column order, downloadable as PDF or Excel, with the worker's name and work number on top.</p>
+
+        <figure class="case-study-figure">
+          <img class="case-study-image" src="/assets/images/rannikon/v2/orange-paper.webp" alt="The Rannikon orange paper view, showing the extrawork rules and a table of date, start, finish, break, hours minus breaks, what work and signature" width="1600" height="1000" loading="lazy">
+          <figcaption class="case-study-caption">The orange paper, generated rather than replaced. The caps at the top are printed exactly as they appear on the paper version, and the table keeps the same columns payroll already knows how to read.</figcaption>
+        </figure>
+
+        <h3 class="case-study-subhead">One calculation, one place, and it is uglier than you want it to be</h3>
+
+        <p>Here is the rule a Rannikon day actually follows. The first 30 minutes of break are an unpaid eating break. If you took that break, your paid day is measured inside an 8-hour-30-minute window; if you did not, it is 8 hours. Anything past that window stops being white paper work and becomes orange paper extrawork. Any break you took <em>beyond</em> the first 30 minutes comes off the extrawork, not off your regular hours.</p>
+
+        <p>That is the entire business. It is about fifteen lines, and it is the most important code in the project:</p>
+
+        <pre class="case-study-code"><code>function calculate(actualStart, actualFinish, breakMins) {
+  const totalBreak = Math.max(0, breakMins || 0)
+  const extraBreak = Math.max(0, totalBreak - 30)
+
+  const workedMins = toMins(actualFinish) - toMins(actualStart)
+  const WHITE_WINDOW = totalBreak &gt;= 30 ? 510 : 480
+
+  if (workedMins &lt;= WHITE_WINDOW) {
+    // short day: it is all white paper, minus the break
+    return { white_hours: toHHMM(workedMins - totalBreak), orange_hours: '0:00', ... }
+  }
+
+  // long day: white caps at 8:00, the rest is orange
+  const orangeStart = addMins(actualStart, WHITE_WINDOW)
+  const orangeMins  = toMins(actualFinish) - toMins(orangeStart) - extraBreak
+  return { white_hours: '8:00', orange_hours: toHHMM(orangeMins), ... }
+}</code></pre>
+
+        <p>I shipped an early version where the frontend had its own copy of this, so the worker could see a live total while typing. It drifted. The two versions disagreed about the extra-break rule, and for a while the screen told people one number while payroll recorded another. Nobody noticed for days, which is the worst way to find out.</p>
+
+        <p>Now this function exists once, on the Fastify backend, and the phone is not allowed to have an opinion. The worker types start, finish and break; the server returns the split. It costs a round trip. It is worth it.</p>
+
+        <figure class="case-study-figure">
+          <img class="case-study-image" src="/assets/images/rannikon/v2/log-hours.webp" alt="The Rannikon log hours dialog, split into field work and berry picking, with preset break buttons for 30, 45 and 60 minutes" width="1600" height="1000" loading="lazy">
+          <figcaption class="case-study-caption">Logging a day. Break is four buttons rather than a free-text field, because 30 / 45 / 60 covers nearly every real day and typing on a phone in a field is miserable. The split into field work and berry picking mirrors the white and green papers.</figcaption>
+        </figure>
+
+        <h3 class="case-study-subhead">The real device is a cheap Android phone with one bar of signal</h3>
+
+        <p>I built this on a laptop, on fibre, in English. None of those conditions exist where it is used. Workers open the app in a field, often on an inexpensive Android phone, in a language that is not English, with hands that have been picking since six in the morning.</p>
+
+        <p>That pushed a lot of decisions that look over-cautious in a demo and turn out to be the whole product in practice: large tap targets, presets instead of free text, a layout that survives a narrow screen, and a mobile build in Expo and React Native alongside the Next.js web app so the same work can be logged either way.</p>
+
+        <figure class="case-study-figure" style="max-width: 20rem; margin-inline: auto;">
+          <img class="case-study-image" src="/assets/images/rannikon/v2/phone-log-hours.webp" alt="The Rannikon log hours screen on a phone" width="540" height="1080" loading="lazy">
+          <figcaption class="case-study-caption">The same logging flow on a phone. Nothing important sits in a hover state, and nothing requires a second hand.</figcaption>
+        </figure>
+
+        <h3 class="case-study-subhead">Let people check their employer's arithmetic</h3>
+
+        <p>This is the feature I am most glad I built, and it was not in the original brief.</p>
+
+        <p>Supervisors record hours for their house group. Workers also record their own. For most of the season those two numbers agree, and when they do not, the old process was an argument between a worker and a supervisor with no shared evidence &mdash; and the worker nearly always loses that argument.</p>
+
+        <p>So the app shows both, side by side, and counts the disagreements: days verified, how many match, how many mismatch, how many are missing, and the running total. The worker can run it themselves, before payroll closes the month, without asking anyone's permission.</p>
+
+        <figure class="case-study-figure">
+          <img class="case-study-image" src="/assets/images/rannikon/v2/verify.webp" alt="The Rannikon verify my timesheet view, comparing supervisor-recorded start and finish times against the worker's own, with a match status on each row" width="1600" height="1000" loading="lazy">
+          <figcaption class="case-study-caption">Verification puts the supervisor's record and the worker's record in the same table, with a status on every row. Ten days verified, ten matches, nothing missing &mdash; and when that is not the case, the worker has something concrete to point at.</figcaption>
+        </figure>
+
+        <p>A trust feature is a strange thing to argue for on a cost sheet. It does not make payroll faster. What it does is make the number at the bottom of the month defensible, which is the actual product.</p>
+
+        <h3 class="case-study-subhead">Everything good in it was requested by someone who does the work</h3>
+
+        <p>The first version was a timesheet calculator and nothing else. Every part that makes it genuinely useful arrived because a person asked:</p>
+
+        <ul>
+          <li>Batch recording, because a supervisor entering 40 workers one at a time is a worse job than the paper it replaced.</li>
+          <li>The berry-picking form in kilograms, because hours are the wrong unit for piece work.</li>
+          <li>PDF and Excel export, because payroll's downstream process expects files, not a login.</li>
+          <li>Payroll submission with a notes field and a visible history of what was already approved, because "did you send June?" was a recurring phone call.</li>
+        </ul>
+
+        <figure class="case-study-figure">
+          <img class="case-study-image" src="/assets/images/rannikon/v2/send-to-payroll.webp" alt="The Rannikon send to payroll view, with checkboxes for each of the four papers, a notes field, and a list of previous approved submissions" width="1600" height="1000" loading="lazy">
+          <figcaption class="case-study-caption">Submitting a month. The previous submissions panel on the right exists purely so nobody has to ask whether last month went through.</figcaption>
+        </figure>
+
+        <p>None of that came out of a planning document. It came from sitting down with Lina, Aleksi and Johanna in person. Every significant decision in this project moved forward in a room, not in an inbox &mdash; which is an inconvenient lesson for a developer who would rather send a message.</p>
+
+        <h3 class="case-study-subhead">Where it ended up</h3>
+
+        <p>The dashboard a worker sees now leads with the four numbers that actually matter to them: total hours, regular hours, extra hours, and kilograms picked. Not charts first. Numbers first, chart second.</p>
+
+        <figure class="case-study-figure">
+          <img class="case-study-image" src="/assets/images/rannikon/v2/dashboard.webp" alt="The Rannikon worker dashboard showing total hours, regular hours, extra hours and berries picked, with a day-by-day list and an hours-by-day chart" width="1600" height="1000" loading="lazy">
+          <figcaption class="case-study-caption">A worker's July: 85 hours 15 minutes across 13 logged days, 378 kg picked, and an explicit note that the month has not been sent to payroll yet.</figcaption>
+        </figure>
+
+        <p>The stack, for anyone who cares about that part: Next.js 16 and React 19 on the web, Fastify 5 and PostgreSQL on the backend, Expo and React Native for mobile. The interesting problems were almost none of those things. They were a 30-minute eating break, four sheets of paper and five languages.</p>
+
+        <p>Before Rannikon, workers filled in those four forms by hand and payroll spent days checking them. That check now takes minutes. If you want the full build &mdash; architecture, roles, the admin side, deployment &mdash; it is written up properly in the <a href="/case-studies/rannikon/">Rannikon case study</a>.</p>
       </div>
       <div class="case-study-cta">
         <p class="case-study-cta-text">Got a problem that needs solving?</p>
