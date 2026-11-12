@@ -378,6 +378,9 @@ function initLanguageSelect() {
     const base = path.startsWith('/fi/') || path === '/fi' ? path.slice(3) || '/' : path;
     const next = target === 'fi' ? '/fi' + base : base;
     try { localStorage.setItem('lang', target); } catch (err) { /* ignore */ }
+    // A cookie too, read before the page draws where storage is blocked: English pages send visitors without a
+    // choice to the Finnish version.
+    document.cookie = 'lang=' + target + '; path=/; max-age=31536000; samesite=lax';
     window.location.href = next + window.location.search + window.location.hash;
   });
 }
