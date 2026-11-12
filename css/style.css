@@ -1702,28 +1702,13 @@ header {
   flex: none;
 }
 
-/* your full photo, uncropped, in a gradient frame with logos floating around it */
+/* your full photo, uncropped, in the same plain frame as the home page's (.hero-photo) */
 .orbit {
   --px: 0;
   --py: 0;
   position: relative;
   width: min(34rem, 100%);
   margin-inline: auto;
-}
-
-.photo-frame {
-  margin: 0;
-  padding: 4px;
-  background: linear-gradient(145deg, #2997ff, #bf5af2 65%, #ff9f0a);
-  border-radius: 30px;
-  box-shadow: 0 30px 80px rgba(41, 151, 255, 0.28);
-}
-
-.photo-frame img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 26px;
 }
 
 .orbit-logo {
@@ -1770,10 +1755,10 @@ header {
 }
 
 /* bento grid */
+/* the About page's "at a glance" tiles, one under the other, full width */
 .bento {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-auto-flow: dense;
+  grid-template-columns: minmax(0, 1fr);
   gap: 20px;
 }
 
@@ -1788,8 +1773,7 @@ header {
   border-radius: 28px;
 }
 
-.bento-wide { grid-column: span 2; }
-.bento-tall { grid-column: span 2; grid-row: span 2; }
+
 
 .bento-wide .bento-title,
 .bento-tall .bento-title {
@@ -2071,23 +2055,7 @@ header {
   color: var(--color-ink-soft);
 }
 
-@media (max-width: 64rem) {
-  .bento {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 40rem) {
-  .bento {
-    grid-template-columns: 1fr;
-  }
-
-  .bento-wide,
-  .bento-tall {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
   .bento-tile {
     min-height: 0;
   }

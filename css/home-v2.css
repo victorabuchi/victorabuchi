@@ -1,0 +1,462 @@
+/* The home page's hero and projects: a studio-dark hero with the products that are live right now beside it, then
+   every live project full width, one under the other, each with a screen of its dashboard. Loaded by the home page
+   only; it builds on style.css's colours, so light and dark themes both work. */
+
+.v2-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* ---------- Hero ---------- */
+/* The section keeps the id "hero" for main.js's pointer glow, so style.css's hero layout is undone here. */
+#hero.v2-hero {
+  display: block;
+  min-height: 0;
+  padding: 96px 0 80px;
+}
+.v2-hero {
+  position: relative;
+  overflow: hidden;
+  color: #f5f5f7;
+  background:
+    radial-gradient(900px 520px at 8% -10%, rgba(41, 196, 107, 0.26), transparent 62%),
+    radial-gradient(760px 520px at 104% 110%, rgba(0, 113, 227, 0.28), transparent 62%),
+    radial-gradient(520px 360px at 70% 10%, rgba(175, 82, 222, 0.14), transparent 70%),
+    #07090c;
+}
+.v2-hero::before {
+  /* a faint grid, like a blueprint */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 30% 30%, #000 30%, transparent 75%);
+  pointer-events: none;
+}
+.v2-hero::after {
+  /* a soft light that follows the pointer (main.js sets --mx and --my) */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(640px circle at var(--mx, 30%) var(--my, 20%), rgba(94, 230, 154, 0.09), transparent 45%);
+  pointer-events: none;
+}
+.v2-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 56px;
+  align-items: center;
+}
+.v2-who {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.v2-who img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 22%;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+.v2-who strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.v2-who span {
+  font-size: 14px;
+  color: rgba(245, 245, 247, 0.62);
+}
+.v2-title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6.2vw, 78px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  margin: 0;
+}
+.v2-title em {
+  font-style: normal;
+  background: linear-gradient(92deg, #5ee69a, #4cc9f0 55%, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.v2-lede {
+  margin: 24px 0 0;
+  max-width: 560px;
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.5;
+  color: rgba(245, 245, 247, 0.72);
+}
+/* What I build, as chips on the dark hero */
+.v2-chips {
+  margin-top: 24px;
+  max-width: 600px;
+}
+.v2-hero .v2-chips .mini-chip {
+  color: rgba(245, 245, 247, 0.88);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+.v2-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+.v2-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.v2-btn:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.v2-btn-primary {
+  background: #f5f5f7;
+  color: #07090c;
+}
+.v2-btn-ghost {
+  color: #f5f5f7;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+.v2-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* The live products, each a link to its site */
+.v2-board {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+.v2-board ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.v2-board li a {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 10px;
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.v2-board li a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+}
+.v2-board img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #fff;
+  object-fit: contain;
+}
+.v2-board-name {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.v2-board-host {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(245, 245, 247, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.v2-go {
+  font-size: 14px;
+  color: rgba(245, 245, 247, 0.35);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.v2-board li a:hover .v2-go {
+  color: #f5f5f7;
+  transform: translate(2px, -2px);
+}
+
+/* ---------- Projects, one under the other ---------- */
+.v2-rank {
+  padding: 88px 0 40px;
+}
+.v2-eyebrow {
+  margin: 0 0 18px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+.v2-features {
+  display: grid;
+  gap: 28px;
+}
+.v2-feature {
+  --hue: 210;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 44px 0;
+  border-radius: 32px;
+  background: var(--color-tile);
+  color: var(--color-ink);
+  isolation: isolate;
+}
+.v2-feature::after {
+  /* a wash of the project's own colour from the corner */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(720px 420px at 100% 0%, hsla(var(--hue), 80%, 55%, 0.13), transparent 70%);
+}
+.v2-feature-head {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 20px 48px;
+  align-items: start;
+  margin-bottom: 36px;
+}
+.v2-no {
+  display: block;
+  margin-bottom: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: hsl(var(--hue), 70%, 40%);
+}
+.v2-feature-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+.v2-feature-title img {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: #fff;
+  object-fit: contain;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+.v2-tag {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+.v2-feature-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--color-ink-soft);
+}
+.v2-feature-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 20px;
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: var(--color-ink-soft);
+}
+.v2-feature-meta span {
+  margin-right: auto;
+}
+/* The dashboard, full width in a browser frame that rises from the bottom of the tile */
+.v2-frame {
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  background: #1d1d1f;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.04), 0 24px 70px rgba(0, 0, 0, 0.2);
+}
+.v2-frame-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 32px;
+  padding: 0 14px;
+  background: #2a2a2d;
+}
+.v2-frame-bar i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+}
+.v2-frame-bar span {
+  margin-left: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+.v2-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The rest, as a list */
+.v2-chart {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  border-radius: 26px;
+  background: var(--color-tile);
+  overflow: hidden;
+}
+.v2-chart li + li {
+  border-top: 1px solid var(--color-rule);
+}
+.v2-chart a,
+.v2-chart div.v2-row {
+  display: grid;
+  grid-template-columns: 44px 40px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  color: var(--color-ink);
+  text-decoration: none;
+}
+.v2-chart a:hover {
+  background: rgba(0, 0, 0, 0.03);
+  text-decoration: none;
+}
+.v2-chart .v2-no {
+  margin: 0;
+  color: var(--color-ink-soft);
+}
+.v2-chart img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #fff;
+  object-fit: contain;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+.v2-chart strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+}
+.v2-chart small {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.v2-chart em {
+  font-style: normal;
+  font-size: 13px;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+}
+.v2-all {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0 0;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 900px) {
+  #hero.v2-hero {
+    padding: 48px 0 44px;
+  }
+  .v2-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+  .v2-rank {
+    padding-top: 56px;
+  }
+  .v2-features {
+    gap: 20px;
+  }
+  .v2-feature {
+    padding: 26px 20px 0;
+    border-radius: 24px;
+  }
+  .v2-feature-head {
+    grid-template-columns: minmax(0, 1fr);
+    margin-bottom: 24px;
+  }
+  .v2-feature-text {
+    font-size: 16px;
+  }
+  .v2-frame {
+    border-radius: 12px 12px 0 0;
+  }
+  .v2-frame-bar {
+    height: 24px;
+    padding: 0 10px;
+    gap: 5px;
+  }
+  .v2-frame-bar i {
+    width: 7px;
+    height: 7px;
+  }
+  .v2-frame-bar span {
+    font-size: 10px;
+  }
+  .v2-chart a,
+  .v2-chart div.v2-row {
+    grid-template-columns: 30px 36px minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px 18px;
+  }
+  .v2-chart em {
+    display: none;
+  }
+}
+
+/* ---------- Dark theme ---------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .v2-no { color: hsl(var(--hue), 75%, 66%); }
+  :root:not([data-theme="light"]) .v2-chart .v2-no { color: var(--color-ink-soft); }
+  :root:not([data-theme="light"]) .v2-frame { box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5); }
+  :root:not([data-theme="light"]) .v2-chart a:hover { background: rgba(255, 255, 255, 0.04); }
+}
+:root[data-theme="dark"] .v2-no { color: hsl(var(--hue), 75%, 66%); }
+:root[data-theme="dark"] .v2-chart .v2-no { color: var(--color-ink-soft); }
+:root[data-theme="dark"] .v2-frame { box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5); }
+:root[data-theme="dark"] .v2-chart a:hover { background: rgba(255, 255, 255, 0.04); }
+
+@media (prefers-reduced-motion: reduce) {
+  .v2-btn, .v2-go, .v2-board li a { transition: none; }
+}

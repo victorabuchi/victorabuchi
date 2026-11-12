@@ -24,7 +24,8 @@
   <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/icon-180.png">
-  <link rel="stylesheet" href="/css/style.css?v=cb4740970a">
+  <link rel="stylesheet" href="/css/style.css?v=cb78855074">
+  <link rel="stylesheet" href="/css/home-v2.css?v=2">
   <script defer data-project="p_babgy4em4p" src="https://statiku.com/s.js"></script>
 </head>
 <body>
@@ -51,13 +52,14 @@
   </header>
 
   <main>
-    <section id="hero">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div class="hero-text">
-          <h1 class="hero-name">Victor <span class="hero-name-accent">Abuchi</span></h1>
-          <p class="hero-role">Ohjelmistokehittäjä · tietojenkäsittelytieteen opiskelija</p>
-          <ul class="mini-chips hero-builds" aria-label="Mitä rakennan">
+    <section class="v2-hero" id="hero">
+      <div class="v2-wrap">
+        <div class="v2-hero-grid">
+          <div>
+            <div class="v2-who"><img src="/assets/images/victor-full.jpg" alt="" width="52" height="52"><div><strong>Victor Abuchi</strong><span>Ohjelmistokehittäjä · Helsinki</span></div></div>
+            <h1 class="v2-title">Rakennan tuotteita, jotka ovat <em>käytössä</em>.</h1>
+            <p class="v2-lede">Verkkopalveluita, mobiili- ja macOS-sovelluksia sekä Shopify-ratkaisuja ideasta julkaisuun. Kahdeksan niistä on käytössä juuri nyt, katso itse.</p>
+          <ul class="mini-chips v2-chips" aria-label="Mitä rakennan">
             <li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Verkkopalvelut</li>
             <li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">Mobiilisovellukset</li>
             <li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/shopify-logo.png" alt="" width="16" height="16">Shopify-sovellukset</li>
@@ -66,24 +68,151 @@
             <li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/terminal.svg)" aria-hidden="true"></span>Kehittäjätyökalut</li>
             <li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/html5.svg" alt="" width="16" height="16">Räätälöidyt verkkosivustot</li>
           </ul>
-          <p class="hero-statement">Muutan todellisen maailman ongelmat ohjelmistoiksi, joihin ihmiset luottavat: työaikakirjanpito yli 300 marjatilan työntekijälle, opiskelija-asumisen sovellus, kryptovaluuttojen maksukerros. Rakennettu alusta alkaen, ei koskaan valmispohjasta.</p>
-          <div class="hero-actions">
-            <a class="button" href="/fi/projects/">Katso projektit</a>
-            <a class="link-more" href="/fi/contact/">Ota yhteyttä</a>
+            <div class="v2-actions">
+              <a class="v2-btn v2-btn-primary" href="#v2-projects">Katso projektit</a>
+              <a class="v2-btn v2-btn-ghost" href="/fi/contact/">Ota yhteyttä</a>
+            </div>
           </div>
+          <nav class="v2-board" aria-label="Käytössä olevat tuotteet">
+            <ul>
+              <li><a href="https://statiku.com" target="_blank" rel="noopener"><img src="/assets/images/projects/statiku.svg" alt="" width="32" height="32"><span><span class="v2-board-name">Statiku</span><span class="v2-board-host">statiku.com</span></span><span class="v2-go" aria-hidden="true">↗</span></a></li>
+              <li><a href="https://notchlight.com" target="_blank" rel="noopener"><img src="/assets/images/projects/notchlight.png" alt="" width="32" height="32"><span><span class="v2-board-name">Notchlight</span><span class="v2-board-host">notchlight.com</span></span><span class="v2-go" aria-hidden="true">↗</span></a></li>
+              <li><a href="https://kuopas.com" target="_blank" rel="noopener"><img src="/assets/images/projects/kuopas.png" alt="" width="32" height="32"><span><span class="v2-board-name">Kuopas</span><span class="v2-board-host">kuopas.com</span></span><span class="v2-go" aria-hidden="true">↗</span></a></li>
+              <li><a href="https://slotnook.fi" target="_blank" rel="noopener"><img src="/assets/images/projects/slotnook.svg" alt="" width="32" height="32"><span><span class="v2-board-name">Slotnook</span><span class="v2-board-host">slotnook.fi</span></span><span class="v2-go" aria-hidden="true">↗</span></a></li>
+              <li><a href="https://www.rannikon.com" target="_blank" rel="noopener"><img src="/assets/images/projects/rannikon.png" alt="" width="32" height="32"><span><span class="v2-board-name">Rannikon</span><span class="v2-board-host">www.rannikon.com</span></span><span class="v2-go" aria-hidden="true">↗</span></a></li>
+              <li><a href="https://pursecast.com" target="_blank" rel="noopener"><img src="/assets/images/projects/pursecast.png" alt="" width="32" height="32"><span><span class="v2-board-name">Pursecast</span><span class="v2-board-host">pursecast.com</span></span><span class="v2-go" aria-hidden="true">↗</span></a></li>
+              <li><a href="https://chronkeep.com" target="_blank" rel="noopener"><img src="/assets/images/projects/chronkeep.png" alt="" width="32" height="32"><span><span class="v2-board-name">ChronKeep</span><span class="v2-board-host">chronkeep.com</span></span><span class="v2-go" aria-hidden="true">↗</span></a></li>
+              <li><a href="https://onshipy.com" target="_blank" rel="noopener"><img src="/assets/images/projects/onshipy.png" alt="" width="32" height="32"><span><span class="v2-board-name">Onshipy</span><span class="v2-board-host">onshipy.com</span></span><span class="v2-go" aria-hidden="true">↗</span></a></li>
+            </ul>
+          </nav>
         </div>
-        <figure class="hero-photo">
-          <img src="/assets/images/victor-full.jpg" alt="Victor Abuchi työpöytänsä ääressä kannettavan kanssa" width="1400" height="1119" fetchpriority="high">
-        </figure>
-        <div class="chip-row" role="navigation" aria-label="Tutustu nyt">
-          <span class="chip-label">Tutustu nyt</span>
-          <a class="chip" href="/fi/projects/">Projektit</a>
-          <a class="chip" href="/fi/case-studies/">Case-esimerkit</a>
-          <a class="chip" href="/fi/services/">Palvelut</a>
-          <a class="chip" href="/fi/resume/">CV</a>
-          <a class="chip" href="/fi/contact/">Yhteystiedot</a>
-          <button type="button" class="chip chip-search" data-open-search>Haku <kbd>/</kbd></button>
+      </div>
+    </section>
+
+    <section class="v2-rank" id="v2-projects">
+      <div class="v2-wrap">
+        <p class="v2-eyebrow">Projektit</p>
+        <div class="v2-features">
+        <article class="v2-feature reveal" id="v2-statiku" style="--hue: 150">
+          <div class="v2-feature-head">
+            <div class="v2-feature-name">
+              <span class="v2-no">01</span>
+              <h3 class="v2-feature-title"><img src="/assets/images/projects/statiku.svg" alt="" width="44" height="44">Statiku</h3>
+              <span class="v2-tag">Web-sovellus</span>
+            </div>
+            <div class="v2-feature-copy">
+              <p class="v2-feature-text">Reaaliaikainen analytiikka verkkosivuille, SaaS-palveluille ja sovelluksille. Se seuraa yhtä polkua ensimmäisestä käynnistä lataukseen, asennukseen, kokeiluun ja ostoon, näyttää jokaisen kävijän heti saapuessaan ja vastaa lukuja koskeviin kysymyksiin selkokielellä. Notchlight on sen ensimmäinen asiakas.</p>
+              <p class="v2-feature-meta"><span>TypeScript · Node.js · PostgreSQL</span><a class="link-more" href="https://statiku.com" target="_blank" rel="noopener">statiku.com</a></p>
+            </div>
+          </div>
+          <div class="v2-frame"><div class="v2-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>statiku.com</span></div><img src="/assets/images/showcase/statiku.webp?v=2" alt="Statikun analytiikka notchlight.comille: kävijät, sivulataukset, välitön poistumisprosentti ja käynnin kesto, kävijäkaavio ja liikenteen erittely" loading="lazy" width="1400" height="875"></div>
+        </article>
+        <article class="v2-feature reveal" id="v2-notchlight" style="--hue: 222">
+          <div class="v2-feature-head">
+            <div class="v2-feature-name">
+              <span class="v2-no">02</span>
+              <h3 class="v2-feature-title"><img src="/assets/images/projects/notchlight.png" alt="" width="44" height="44">Notchlight</h3>
+              <span class="v2-tag">macOS-sovellus</span>
+            </div>
+            <div class="v2-feature-copy">
+              <p class="v2-feature-text">Widgetit suoraan macOSin lukitusnäytölle, Dynamic Island loven ympärille MacBookeihin, ja Light: avaa lovesta musiikki, peili, kalenteri, muistiinpanot, ajastimet ja tehtävät. 21 widgettiä missä koossa tahansa, missä kohtaa lukitusnäyttöä tahansa.</p>
+              <p class="v2-feature-meta"><span>Swift · SwiftUI</span><a class="link-more" href="https://notchlight.com" target="_blank" rel="noopener">notchlight.com</a></p>
+            </div>
+          </div>
+          <div class="v2-frame v2-frame-plain"><img src="/assets/images/showcase/notchlight.webp?v=2" alt="Macin lukitusnäyttö Notchlightin widgeteillä: kellonaika, tervehdys ja sää, maailmankellot, osakkeet, akku, järjestelmän kuorma, soiva kappale sanoituksineen ja tehtävälistat" loading="lazy" width="1456" height="945"></div>
+        </article>
+        <article class="v2-feature reveal" id="v2-kuopas" style="--hue: 145">
+          <div class="v2-feature-head">
+            <div class="v2-feature-name">
+              <span class="v2-no">03</span>
+              <h3 class="v2-feature-title"><img src="/assets/images/projects/kuopas.png" alt="" width="44" height="44">Kuopas</h3>
+              <span class="v2-tag">Web- ja puhelinsovellus</span>
+            </div>
+            <div class="v2-feature-copy">
+              <p class="v2-feature-text">Kuopaksen opiskelija-asuntojen varausjärjestelmä Kuopiossa. Asukkaat varaavat pyykkituvan, saunan, parkkipaikan ja yhteistilat, näkevät milloin kukin vapautuu seuraavaksi, ottavat naapurin mukaan ja saavat muistutuksen ennen vuoroaan. Ylläpito hoitaa rakennukset, asukkaat ja säännöt yhdessä paikassa. Suomeksi ja englanniksi, verkossa ja puhelinsovelluksessa.</p>
+              <p class="v2-feature-meta"><span>Next.js · Prisma · PostgreSQL · Expo</span><a class="link-more" href="https://kuopas.com" target="_blank" rel="noopener">kuopas.com</a></p>
+            </div>
+          </div>
+          <div class="v2-frame"><div class="v2-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>kuopas.com</span></div><img src="/assets/images/showcase/kuopas.webp?v=2" alt="Asukkaiden varaussivu Kuopaksessa: pyykkitupa, sauna, parkkipaikat ja yhteistilat sekä milloin kukin vapautuu, ja asukkaan tulevat varaukset" loading="lazy" width="2160" height="1350"></div>
+        </article>
+        <article class="v2-feature reveal" id="v2-slotnook" style="--hue: 335">
+          <div class="v2-feature-head">
+            <div class="v2-feature-name">
+              <span class="v2-no">04</span>
+              <h3 class="v2-feature-title"><img src="/assets/images/projects/slotnook.svg" alt="" width="44" height="44">Slotnook</h3>
+              <span class="v2-tag">Web-sovellus</span>
+            </div>
+            <div class="v2-feature-copy">
+              <p class="v2-feature-text">White-label-varausjärjestelmä opiskelija-asumisen organisaatioille. Yksi asennus palvelee montaa organisaatiota, kutakin omassa osoitteessaan omalla logollaan, väreillään ja teksteillään, joten asukkaat näkevät vain oman vuokranantajansa brändin. Reaaliaikaiset varauskalenterit, viikkorajat ja vikailmoitukset.</p>
+              <p class="v2-feature-meta"><span>Next.js · Prisma · PostgreSQL</span><a class="link-more" href="https://slotnook.fi" target="_blank" rel="noopener">slotnook.fi</a></p>
+            </div>
+          </div>
+          <div class="v2-frame"><div class="v2-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>slotnook.fi</span></div><img src="/assets/images/showcase/slotnook.webp?v=2" alt="Pyykkituvan varauskalenteri Slotnookissa asumisorganisaation brändillä: aukioloajat ja säännöt, tämän viikon käytetyt tunnit ja viikon vapaat ja varatut vuorot" loading="lazy" width="2160" height="1350"></div>
+        </article>
+        <article class="v2-feature reveal" id="v2-rannikon" style="--hue: 140">
+          <div class="v2-feature-head">
+            <div class="v2-feature-name">
+              <span class="v2-no">05</span>
+              <h3 class="v2-feature-title"><img src="/assets/images/projects/rannikon.png" alt="" width="44" height="44">Rannikon</h3>
+              <span class="v2-tag">Asiakastyö</span>
+            </div>
+            <div class="v2-feature-copy">
+              <p class="v2-feature-text">Työaikajärjestelmä Rannikon Puutarhalle, marjatilalle, jolla on yli 300 kausityöntekijää kuudessa talokunnassa. Työnjohtajat kirjaavat tunnit erissä, talovastaavat kirjaavat jokaisen päivän, palkanlaskenta vertaa työnjohtajien tunteja työntekijöiden tunteihin, ja reaaliaikainen taulu pyörii talojen televisioissa. Viennit PDF- ja Excel-muotoon, viidellä kielellä.</p>
+              <p class="v2-feature-meta"><span>Next.js · Fastify · PostgreSQL</span><a class="link-more" href="/fi/case-studies/rannikon/">Lue case-esimerkki</a><a class="link-more" href="https://www.rannikon.com" target="_blank" rel="noopener">www.rannikon.com</a></p>
+            </div>
+          </div>
+          <div class="v2-frame"><div class="v2-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>www.rannikon.com</span></div><img src="/assets/images/showcase/rannikon.webp?v=2" alt="Rannikonin työntekijän näkymä: kuukauden työpäivät alkamis- ja päättymisaikoineen, tehdyt tunnit ja yhteissummat" loading="lazy" width="2160" height="1040"></div>
+        </article>
+        <article class="v2-feature reveal" id="v2-pursecast" style="--hue: 160">
+          <div class="v2-feature-head">
+            <div class="v2-feature-name">
+              <span class="v2-no">06</span>
+              <h3 class="v2-feature-title"><img src="/assets/images/projects/pursecast.png" alt="" width="44" height="44">Pursecast</h3>
+              <span class="v2-tag">Web- ja puhelinsovellus</span>
+            </div>
+            <div class="v2-feature-copy">
+              <p class="v2-feature-text">Henkilökohtainen talous, joka katsoo eteenpäin. Money Weather ennustaa saldosi päivä päivältä kuin sään, varoittaa ennen tiukkaa viikkoa ja suunnittelee laskujen, tulojen, budjettien ja kalenterissa jo olevien menojen mukaan.</p>
+              <p class="v2-feature-meta"><span>Next.js · Prisma · PostgreSQL · Expo</span><a class="link-more" href="https://pursecast.com" target="_blank" rel="noopener">pursecast.com</a></p>
+            </div>
+          </div>
+          <div class="v2-frame"><div class="v2-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>pursecast.com</span></div><img src="/assets/images/showcase/pursecast.webp?v=2" alt="Pursecastin Money Weather: tämän päivän saldo, viikkokohtainen ennuste myrskyvaroituksineen, saldon kaavio kolmelle kuukaudelle ja tulevat laskut" loading="lazy" width="2160" height="1350"></div>
+        </article>
+        <article class="v2-feature reveal" id="v2-chronkeep" style="--hue: 45">
+          <div class="v2-feature-head">
+            <div class="v2-feature-name">
+              <span class="v2-no">07</span>
+              <h3 class="v2-feature-title"><img src="/assets/images/projects/chronkeep.png" alt="" width="44" height="44">ChronKeep</h3>
+              <span class="v2-tag">Web- ja puhelinsovellus</span>
+            </div>
+            <div class="v2-feature-copy">
+              <p class="v2-feature-text">Yksi kalenteri oppitunneille, tapahtumille ja tehtäville. Kirjoita lause, niin tehtävä lisätään, saat muistutuksia kunnes kuittaat sen tehdyksi, ja kaikki pysyy synkronoituna puhelinsovelluksen kanssa. 30 päivän roskakori ja tilastot ajallaan tehdyistä.</p>
+              <p class="v2-feature-meta"><span>JavaScript · Expo</span><a class="link-more" href="https://chronkeep.com" target="_blank" rel="noopener">chronkeep.com</a></p>
+            </div>
+          </div>
+          <div class="v2-frame"><div class="v2-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>chronkeep.com</span></div><img src="/assets/images/showcase/chronkeep.webp?v=2" alt="ChronKeepin viikkonäkymä: luennot, työvuorot ja palautusten määräajat kalenterissa, vieressä tehtävälista jaoteltuna myöhässä oleviin, tämän päivän, tämän viikon ja myöhempiin" loading="lazy" width="1400" height="875"></div>
+        </article>
+        <article class="v2-feature reveal" id="v2-onshipy" style="--hue: 275">
+          <div class="v2-feature-head">
+            <div class="v2-feature-name">
+              <span class="v2-no">08</span>
+              <h3 class="v2-feature-title"><img src="/assets/images/projects/onshipy.png" alt="" width="44" height="44">Onshipy</h3>
+              <span class="v2-tag">Web- ja Shopify-sovellus</span>
+            </div>
+            <div class="v2-feature-copy">
+              <p class="v2-feature-text">Dropshipping-automaatio jälleenmyyjille. Liitä tuotelinkki Nikeltä, ASOSilta, Amazonilta tai yli 900 muulta brändiltä, aseta hinta reaaliaikaisen katelaskurin avulla ja vie tuote Shopify-kauppaasi yhdellä napsautuksella. Tilaukset palaavat yhteen paikkaan.</p>
+              <p class="v2-feature-meta"><span>Next.js · Fastify · PostgreSQL</span><a class="link-more" href="https://onshipy.com" target="_blank" rel="noopener">onshipy.com</a></p>
+            </div>
+          </div>
+          <div class="v2-frame"><div class="v2-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>onshipy.com</span></div><img src="/assets/images/showcase/onshipy.webp?v=2" alt="Onshipyn listaukset: tuodut tuotteet lähdehintoineen, myyntihintoineen, katteineen ja kateprosentteineen, kukin viety Shopifyhin" loading="lazy" width="2160" height="1350"></div>
+        </article>
         </div>
+        <ol class="v2-chart" start="9">
+            <li><a href="https://github.com/victorabuchi/knewler" target="_blank" rel="noopener"><span class="v2-no">09</span><img src="/assets/images/projects/knewler.svg" alt="" width="40" height="40"><span><strong>Knewler</strong><small>Multi-tenant-verkko-oppimisalusta: yliopistot, yritykset ja urheiluseurat käynnistävät oman brändätyn koulutusympäristön minuuteissa.</small></span><em>Web-sovellus</em></a></li>
+            <li><a href="https://victorabuchi.github.io/macxray-app/" target="_blank" rel="noopener"><span class="v2-no">10</span><img src="/assets/images/projects/macxray.png" alt="" width="40" height="40"><span><strong>MacXray</strong><small>Näe, mitä Macisi tekee koko päivän, reaaliajassa ja selkokielellä: jokainen ohjelma, tiedostokirjoitus ja yhteys, ja miksi se tapahtuu.</small></span><em>macOS-sovellus</em></a></li>
+            <li><div class="v2-row"><span class="v2-no">11</span><img src="/assets/images/projects/snakebite.png" alt="" width="40" height="40"><span><strong>Snake Bite</strong><small>Klassinen matopeli 3D:nä Macille, kymmenellä uudella mekaniikalla, jotka muuttavat tutun pelin.</small></span><em>macOS-peli</em></div></li>
+            <li><a href="/fi/projects/#folder-shopify"><span class="v2-no">12</span><img src="/assets/images/logos/shopify-logo.png" alt="" width="40" height="40"><span><strong>Shopify-teemat ja -sovellukset</strong><small>Online Store 2.0 -teema ja upotetut Shopify-sovellukset.</small></span><em>Shopify</em></a></li>
+        </ol>
+        <p class="v2-all"><a class="link-more" href="/fi/projects/">Kaikki projektit</a></p>
       </div>
     </section>
 
@@ -145,214 +274,7 @@
       </div>
     </section>
 
-    <section id="featured" class="home-section">
-      <div class="section-head section-head-row reveal">
-        <div>
-          <p class="section-eyebrow">Valikoituja töitä</p>
-          <h2 class="section-title">Asioita, joita olen rakentanut.</h2>
-        </div>
-        <a class="link-more" href="/fi/projects/">Kaikki projektit</a>
-      </div>
-      <div class="carousel reveal" data-carousel>
-        <div class="carousel-track" tabindex="0" role="region" aria-label="Valitut projektit">
-            <a class="project-card" href="https://statiku.com" target="_blank" rel="noopener" style="--accent: 150">
-              <span class="project-card-logo"><img src="/assets/images/projects/statiku.svg" alt=""></span>
-              <span class="project-card-tag">Web-sovellus</span>
-              <h3 class="project-card-title">Statiku</h3>
-              <p class="project-card-text">Reaaliaikainen analytiikka verkkosivuille, SaaS-palveluille ja sovelluksille: jokainen kävijä heti saapuessaan, ensimmäisestä käynnistä ostoon, ja kaikki muu, mitä haluat seurata.</p>
-              <span class="project-card-meta">TypeScript</span>
-              <span class="project-card-cta">Vieraile sivustolla</span>
-            </a>
-            <a class="project-card" href="https://notchlight.com" target="_blank" rel="noopener" style="--accent: 300">
-              <span class="project-card-logo"><img src="/assets/images/projects/notchlight.png" alt=""></span>
-              <span class="project-card-tag">macOS-sovellus</span>
-              <h3 class="project-card-title">Notchlight</h3>
-              <p class="project-card-text">Live-widgetit macOS-lukitusnäytölle, Dynamic Island loven ympärillä, ja Light: avaa lovesta musiikki, peili, kalenteri, muistiinpanot ja muuta.</p>
-              <span class="project-card-meta">Swift</span>
-              <span class="project-card-cta">Vieraile sivustolla</span>
-            </a>
-            <a class="project-card" href="https://kuopas.com" target="_blank" rel="noopener" style="--accent: 210">
-              <span class="project-card-logo"><img src="/assets/images/projects/kuopas.png" alt=""></span>
-              <span class="project-card-tag">Web-sovellus</span>
-              <h3 class="project-card-title">Kuopas</h3>
-              <p class="project-card-text">Kuopaksen varausjärjestelmä opiskelija-asumiseen Kuopiossa: pyykki-, sauna- ja parkkivaraukset, kuittaukset ja muistutukset verkossa ja iPhonella.</p>
-              <span class="project-card-meta">TypeScript</span>
-              <span class="project-card-cta">Vieraile sivustolla</span>
-            </a>
-            <a class="project-card" href="https://slotnook.fi" target="_blank" rel="noopener" style="--accent: 255">
-              <span class="project-card-logo"><img src="/assets/images/projects/slotnook.svg" alt=""></span>
-              <span class="project-card-tag">Web-sovellus</span>
-              <h3 class="project-card-title">Slotnook</h3>
-              <p class="project-card-text">White-label-varausjärjestelmä opiskelija-asumisen organisaatioille: pyykki, sauna, parkkipaikat ja yhteistilat, yksi asennus monelle organisaatiolle.</p>
-              <span class="project-card-meta">TypeScript</span>
-              <span class="project-card-cta">Vieraile sivustolla</span>
-            </a>
-            <a class="project-card" href="/fi/case-studies/rannikon/" style="--accent: 140">
-              <span class="project-card-logo"><img src="/assets/images/projects/rannikon.png" alt=""></span>
-              <span class="project-card-tag">Case-esimerkki</span>
-              <h3 class="project-card-title">Rannikon</h3>
-              <p class="project-card-text">Marjatilan työntekijöiden työaikajärjestelmä Rannikon Puutarhalle: tunnit, palkkayhteenvedot ja vienti PDF- tai Excel-muotoon.</p>
-              <span class="project-card-meta">Next.js · Fastify · PostgreSQL</span>
-              <span class="project-card-cta">Lue case-esimerkki</span>
-            </a>
-            <a class="project-card" href="https://pursecast.com" target="_blank" rel="noopener" style="--accent: 160">
-              <span class="project-card-logo"><img src="/assets/images/projects/pursecast.png" alt=""></span>
-              <span class="project-card-tag">Web-sovellus</span>
-              <h3 class="project-card-title">Pursecast</h3>
-              <p class="project-card-text">Henkilökohtainen talous: kulut, laskut ja tulot, budjetit, ja päiväkohtainen "Money Weather" -ennuste tulevasta.</p>
-              <span class="project-card-meta">TypeScript</span>
-              <span class="project-card-cta">Vieraile sivustolla</span>
-            </a>
-            <a class="project-card" href="https://chronkeep.com" target="_blank" rel="noopener" style="--accent: 45">
-              <span class="project-card-logo"><img src="/assets/images/projects/chronkeep.png" alt=""></span>
-              <span class="project-card-tag">Web-sovellus</span>
-              <h3 class="project-card-title">ChronKeep</h3>
-              <p class="project-card-text">Kalenteri ja tehtävälista, joka muistuttaa kunnes tehtävä on valmis, synkronoituna web-sovelluksen ja natiivin mobiilisovelluksen välillä.</p>
-              <span class="project-card-meta">JavaScript</span>
-              <span class="project-card-cta">Vieraile sivustolla</span>
-            </a>
-            <a class="project-card" href="https://onshipy.com" target="_blank" rel="noopener" style="--accent: 275">
-              <span class="project-card-logo"><img src="/assets/images/projects/onshipy.png" alt=""></span>
-              <span class="project-card-tag">Web-sovellus</span>
-              <h3 class="project-card-title">Onshipy</h3>
-              <p class="project-card-text">Dropshipping-automaatio: tuo tuotteita Nikelta, ASOSilta, Amazonilta ja yli 900 brändiltä ja myy Shopifyn kautta.</p>
-              <span class="project-card-meta">JavaScript</span>
-              <span class="project-card-cta">Vieraile sivustolla</span>
-            </a>
-            <a class="project-card" href="https://github.com/victorabuchi/knewler" target="_blank" rel="noopener" style="--accent: 245">
-              <span class="project-card-logo"><img src="/assets/images/projects/knewler.svg" alt=""></span>
-              <span class="project-card-tag">Web-sovellus</span>
-              <h3 class="project-card-title">Knewler</h3>
-              <p class="project-card-text">Multi-tenant-verkko-oppimisalusta: yliopistot, yritykset ja urheiluseurat käynnistävät oman brändätyn koulutusympäristön minuuteissa.</p>
-              <span class="project-card-meta">TypeScript</span>
-              <span class="project-card-cta">Katso GitHubissa</span>
-            </a>
-            <a class="project-card" href="https://victorabuchi.github.io/macxray-app/" target="_blank" rel="noopener" style="--accent: 220">
-              <span class="project-card-logo"><img src="/assets/images/projects/macxray.png" alt=""></span>
-              <span class="project-card-tag">macOS-sovellus</span>
-              <h3 class="project-card-title">MacXray</h3>
-              <p class="project-card-text">Näe, mitä Macisi tekee koko päivän, reaaliajassa ja selkokielellä: jokainen ohjelma, tiedostokirjoitus ja yhteys, ja miksi se tapahtuu.</p>
-              <span class="project-card-meta">Swift</span>
-              <span class="project-card-cta">Vieraile sivustolla</span>
-            </a>
-            <div class="project-card is-static" style="--accent: 95">
-              <span class="project-card-logo"><img src="/assets/images/projects/snakebite.png" alt=""></span>
-              <span class="project-card-tag">macOS-peli</span>
-              <h3 class="project-card-title">Snake Bite</h3>
-              <p class="project-card-text">Klassinen matopeli 3D:nä Macille, kymmenellä uudella mekaniikalla, jotka muuttavat tutun pelin.</p>
-              <span class="project-card-meta">Swift</span>
-            </div>
-            <div class="project-card is-static" style="--accent: 195">
-              <span class="project-card-logo"><img src="/assets/images/projects/tekman.png" alt=""></span>
-              <span class="project-card-tag">Web-sovellus</span>
-              <h3 class="project-card-title">Tekman</h3>
-              <p class="project-card-text">Asukassovellus yliopisto- ja kerrostaloyhteisöille: chat, ilmoitustaulu, varaukset, kulujen jako, kämppäkaverihaku ja vuokrasopimusten hallinta.</p>
-              <span class="project-card-meta">TypeScript</span>
-            </div>
-            <div class="project-card is-static" style="--accent: 28">
-              <span class="project-card-logo"><img src="/assets/images/projects/swifrly.png" alt=""></span>
-              <span class="project-card-tag">Sovellus</span>
-              <h3 class="project-card-title">Swifrly</h3>
-              <p class="project-card-text">Rahoituskerros, joka yhdistää kryptovaluutat todelliseen maailmaan: kaupankäynti, vaihto, maksut ja korttiostokset yhdessä sovelluksessa.</p>
-              <span class="project-card-meta">TypeScript</span>
-            </div>
-            <a class="project-card" href="/fi/projects/#folder-shopify-themes" style="--accent: 330">
-              <span class="project-card-logo"><img src="/assets/images/logos/shopify-logo.png" alt=""></span>
-              <span class="project-card-tag">Shopify-teema</span>
-              <h3 class="project-card-title">Shopify-teemat</h3>
-              <p class="project-card-text">Räätälöity Shopify Online Store 2.0 -teema, rakennettu tyhjästä Liquidilla: Blanc muoti- ja label-tyylisille kaupoille.</p>
-              <span class="project-card-meta">Liquid</span>
-              <span class="project-card-cta">Katso Shopify-teemat</span>
-            </a>
-            <a class="project-card" href="/fi/projects/#folder-shopify-apps" style="--accent: 150">
-              <span class="project-card-logo"><img src="/assets/images/logos/shopify-logo.png" alt=""></span>
-              <span class="project-card-tag">2 sovellusta</span>
-              <h3 class="project-card-title">Shopify-sovellukset</h3>
-              <p class="project-card-text">Upotettuja Shopify-sovelluksia, jotka vievät kaupan valmissovelluksia pidemmälle: käytössä Onshipyn dropshipping-alustalle, ja tekeillä Swifrlyn kryptomaksuille.</p>
-              <span class="project-card-meta">Shopify Polaris</span>
-              <span class="project-card-cta">Katso Shopify-sovellukset</span>
-            </a>
-        
-        </div>
-        <div class="carousel-controls">
-          <button type="button" class="carousel-btn" data-carousel-prev aria-label="Edellinen"><span aria-hidden="true">‹</span></button>
-          <button type="button" class="carousel-btn" data-carousel-next aria-label="Seuraava"><span aria-hidden="true">›</span></button>
-        </div>
-      </div>
-    </section>
 
-    <section id="showcase" class="home-section">
-      <div class="section-head reveal">
-        <p class="section-eyebrow">Case-esimerkki</p>
-        <h2 class="section-title">Rannikon toiminnassa.</h2>
-        <p class="section-lede">Yksi järjestelmä koko marjatilan kaudelle: jokainen rooli pellolta palkanlaskentaan saa omaan työhönsä rakennetun näkymän.</p>
-      </div>
-      <div class="showcase reveal" data-showcase>
-        <div class="showcase-tabs" role="tablist" aria-label="Rannikonin näkymät">
-            <button type="button" class="showcase-tab" role="tab" id="tab-dashboard" aria-controls="screen-dashboard" aria-selected="true" tabindex="0">
-              <span class="showcase-tab-label">Kojelauta</span>
-              <span class="showcase-tab-bar" aria-hidden="true"><i></i></span>
-            </button>
-            <button type="button" class="showcase-tab" role="tab" id="tab-supervisors" aria-controls="screen-supervisors" aria-selected="false" tabindex="-1">
-              <span class="showcase-tab-label">Työnjohtaja</span>
-              <span class="showcase-tab-bar" aria-hidden="true"><i></i></span>
-            </button>
-            <button type="button" class="showcase-tab" role="tab" id="tab-housemaster" aria-controls="screen-housemaster" aria-selected="false" tabindex="-1">
-              <span class="showcase-tab-label">Majoitusvastaava</span>
-              <span class="showcase-tab-bar" aria-hidden="true"><i></i></span>
-            </button>
-            <button type="button" class="showcase-tab" role="tab" id="tab-payroll" aria-controls="screen-payroll" aria-selected="false" tabindex="-1">
-              <span class="showcase-tab-label">Palkanlaskenta</span>
-              <span class="showcase-tab-bar" aria-hidden="true"><i></i></span>
-            </button>
-            <button type="button" class="showcase-tab" role="tab" id="tab-admin" aria-controls="screen-admin" aria-selected="false" tabindex="-1">
-              <span class="showcase-tab-label">Ylläpito</span>
-              <span class="showcase-tab-bar" aria-hidden="true"><i></i></span>
-            </button>
-            <button type="button" class="showcase-tab" role="tab" id="tab-board" aria-controls="screen-board" aria-selected="false" tabindex="-1">
-              <span class="showcase-tab-label">Näyttötaulu</span>
-              <span class="showcase-tab-bar" aria-hidden="true"><i></i></span>
-            </button>
-        </div>
-        <div class="showcase-stage">
-          <div class="browser" aria-live="off">
-            <div class="browser-bar" aria-hidden="true">
-              <span class="browser-dots"><i></i><i></i><i></i></span>
-              <span class="browser-url">rannikon.com</span>
-            </div>
-            <div class="browser-screens">
-              <figure class="browser-screen is-active" id="screen-dashboard" role="tabpanel" aria-labelledby="tab-dashboard">
-                <img src="/assets/images/rannikon/dashboard.png" alt="Rannikonin työntekijän kojelaudan yleisnäkymä" width="2541" height="1223">
-              </figure>
-              <figure class="browser-screen" id="screen-supervisors" role="tabpanel" aria-labelledby="tab-supervisors">
-                <img src="/assets/images/rannikon/supervisors.png" alt="Työnjohtajan ryhmäkirjaussivu" width="2541" height="1223" loading="lazy">
-              </figure>
-              <figure class="browser-screen" id="screen-housemaster" role="tabpanel" aria-labelledby="tab-housemaster">
-                <img src="/assets/images/rannikon/housemaster.png" alt="Majoitusvastaavan päivittäinen työlokisivu" width="2541" height="1223" loading="lazy">
-              </figure>
-              <figure class="browser-screen" id="screen-payroll" role="tabpanel" aria-labelledby="tab-payroll">
-                <img src="/assets/images/rannikon/payroll.png" alt="Palkanlaskennan tarkistussivu, jossa verrataan työnjohtajan ja työntekijän tunteja" width="2541" height="1223" loading="lazy">
-              </figure>
-              <figure class="browser-screen" id="screen-admin" role="tabpanel" aria-labelledby="tab-admin">
-                <img src="/assets/images/rannikon/admin.png" alt="Ylläpitopaneeli, jossa koko työntekijäluettelo" width="2541" height="1223" loading="lazy">
-              </figure>
-              <figure class="browser-screen" id="screen-board" role="tabpanel" aria-labelledby="tab-board">
-                <img src="/assets/images/rannikon/board.png" alt="Rannikon-näyttötaulu, joka näyttää reaaliaikaiset työlokit majoitusrakennuksen televisiossa" width="2541" height="1223" loading="lazy">
-              </figure>
-            </div>
-          </div>
-        </div>
-        <div class="showcase-captions" aria-live="polite">
-          <p class="showcase-caption is-active">Kojelaudan yleisnäkymä</p>
-          <p class="showcase-caption">Työnjohtajan ryhmäkirjaussivu</p>
-          <p class="showcase-caption">Majoitusvastaavan päivittäinen työlokisivu</p>
-          <p class="showcase-caption">Palkanlaskennan tarkistus: työnjohtajan ja työntekijän tunnit</p>
-          <p class="showcase-caption">Ylläpitopaneeli: koko työntekijäluettelo</p>
-          <p class="showcase-caption">Reaaliaikainen työlokinäyttö majoitusryhmien televisioille</p>
-        </div>
-        <p class="showcase-link"><a class="link-more" href="/fi/case-studies/rannikon/">Lue case-esimerkki</a></p>
-      </div>
-    </section>
 
     <section id="stack" class="home-section">
       <div class="section-head reveal">
@@ -559,7 +481,7 @@
     </div>
   </footer>
 
-  <script src="/js/i18n.js?v=f2f12be511"></script>
+  <script src="/js/i18n.js?v=c61e2fe16a"></script>
   <script src="/js/main.js?v=02086d5171"></script>
 </body>
 </html>
