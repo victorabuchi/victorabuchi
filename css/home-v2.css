@@ -28,7 +28,6 @@
   --h-chip-bg: rgba(255, 255, 255, 0.85);
   --h-chip-line: rgba(0, 0, 0, 0.07);
   --h-avatar-line: rgba(0, 0, 0, 0.08);
-  --h-em: linear-gradient(92deg, #12a150, #0a84ff 55%, #8b5cf6);
   --h-bg:
     radial-gradient(900px 520px at 8% -10%, rgba(41, 196, 107, 0.13), transparent 62%),
     radial-gradient(760px 520px at 104% 110%, rgba(0, 113, 227, 0.13), transparent 62%),
@@ -99,18 +98,14 @@
 }
 .v2-title {
   font-family: var(--font-display);
-  font-size: clamp(40px, 6.2vw, 78px);
-  line-height: 1.02;
-  letter-spacing: -0.035em;
+  font-size: clamp(32px, 4.2vw, 54px);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
   font-weight: 700;
   margin: 0;
 }
 .v2-title em {
   font-style: normal;
-  background: var(--h-em);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 .v2-lede {
   margin: 24px 0 0;
@@ -492,7 +487,6 @@
     --h-chip-bg: rgba(255, 255, 255, 0.07);
     --h-chip-line: rgba(255, 255, 255, 0.1);
     --h-avatar-line: rgba(255, 255, 255, 0.18);
-    --h-em: linear-gradient(92deg, #5ee69a, #4cc9f0 55%, #a78bfa);
     --h-bg:
       radial-gradient(900px 520px at 8% -10%, rgba(41, 196, 107, 0.26), transparent 62%),
       radial-gradient(760px 520px at 104% 110%, rgba(0, 113, 227, 0.28), transparent 62%),
@@ -516,7 +510,6 @@
   --h-chip-bg: rgba(255, 255, 255, 0.07);
   --h-chip-line: rgba(255, 255, 255, 0.1);
   --h-avatar-line: rgba(255, 255, 255, 0.18);
-  --h-em: linear-gradient(92deg, #5ee69a, #4cc9f0 55%, #a78bfa);
   --h-bg:
     radial-gradient(900px 520px at 8% -10%, rgba(41, 196, 107, 0.26), transparent 62%),
     radial-gradient(760px 520px at 104% 110%, rgba(0, 113, 227, 0.28), transparent 62%),
