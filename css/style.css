@@ -3789,6 +3789,11 @@ span.example-ref {
   color: var(--color-ink);
 }
 
+/* a second list on the same page, such as the Projects page's client work */
+.projects-inner > .ledger-list + .section-label {
+  margin-top: 4.5rem;
+}
+
 .section-label {
   flex: 0 0 auto;
   font-size: 14px;

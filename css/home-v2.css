@@ -1,5 +1,5 @@
-/* The home page's hero and projects: a studio-dark hero with the products that are live right now beside it, then
-   every live project full width, one under the other, each with a screen of its dashboard. Loaded by the home page
+/* The home page's hero and projects: a hero with the products that are live right now beside it, then every
+   project full width, one under the other, each with a screen of the app, and the client work after them. Loaded by the home page
    only; it builds on style.css's colours, so light and dark themes both work. */
 
 .v2-wrap {
@@ -9,7 +9,32 @@
 }
 
 /* ---------- Hero ---------- */
-/* The section keeps the id "hero" for main.js's pointer glow, so style.css's hero layout is undone here. */
+/* Light with the site's light theme, the dark studio look with its dark theme. The colours are set once here and
+   swapped at the bottom of the file. The section keeps the id "hero" for main.js's pointer glow, so style.css's hero
+   layout is undone here. */
+.v2-hero {
+  --h-ink: #1d1d1f;
+  --h-soft: rgba(29, 29, 31, 0.68);
+  --h-faint: rgba(29, 29, 31, 0.45);
+  --h-line: rgba(0, 0, 0, 0.045);
+  --h-glow: rgba(0, 113, 227, 0.07);
+  --h-card: rgba(255, 255, 255, 0.78);
+  --h-card-line: rgba(0, 0, 0, 0.08);
+  --h-card-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+  --h-hover: rgba(0, 0, 0, 0.04);
+  --h-btn-bg: var(--color-blue);
+  --h-btn-ink: #fff;
+  --h-ghost-line: rgba(0, 0, 0, 0.16);
+  --h-chip-bg: rgba(255, 255, 255, 0.85);
+  --h-chip-line: rgba(0, 0, 0, 0.07);
+  --h-avatar-line: rgba(0, 0, 0, 0.08);
+  --h-em: linear-gradient(92deg, #12a150, #0a84ff 55%, #8b5cf6);
+  --h-bg:
+    radial-gradient(900px 520px at 8% -10%, rgba(41, 196, 107, 0.13), transparent 62%),
+    radial-gradient(760px 520px at 104% 110%, rgba(0, 113, 227, 0.13), transparent 62%),
+    radial-gradient(520px 360px at 70% 10%, rgba(175, 82, 222, 0.09), transparent 70%),
+    #fbfbfd;
+}
 #hero.v2-hero {
   display: block;
   min-height: 0;
@@ -18,20 +43,16 @@
 .v2-hero {
   position: relative;
   overflow: hidden;
-  color: #f5f5f7;
-  background:
-    radial-gradient(900px 520px at 8% -10%, rgba(41, 196, 107, 0.26), transparent 62%),
-    radial-gradient(760px 520px at 104% 110%, rgba(0, 113, 227, 0.28), transparent 62%),
-    radial-gradient(520px 360px at 70% 10%, rgba(175, 82, 222, 0.14), transparent 70%),
-    #07090c;
+  color: var(--h-ink);
+  background: var(--h-bg);
 }
 .v2-hero::before {
   /* a faint grid, like a blueprint */
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-image: linear-gradient(var(--h-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--h-line) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse at 30% 30%, #000 30%, transparent 75%);
   pointer-events: none;
@@ -41,7 +62,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(640px circle at var(--mx, 30%) var(--my, 20%), rgba(94, 230, 154, 0.09), transparent 45%);
+  background: radial-gradient(640px circle at var(--mx, 30%) var(--my, 20%), var(--h-glow), transparent 45%);
   pointer-events: none;
 }
 .v2-hero-grid {
@@ -64,7 +85,7 @@
   border-radius: 50%;
   object-fit: cover;
   object-position: 50% 22%;
-  border: 2px solid rgba(255, 255, 255, 0.18);
+  border: 2px solid var(--h-avatar-line);
 }
 .v2-who strong {
   display: block;
@@ -74,7 +95,7 @@
 }
 .v2-who span {
   font-size: 14px;
-  color: rgba(245, 245, 247, 0.62);
+  color: var(--h-soft);
 }
 .v2-title {
   font-family: var(--font-display);
@@ -86,7 +107,7 @@
 }
 .v2-title em {
   font-style: normal;
-  background: linear-gradient(92deg, #5ee69a, #4cc9f0 55%, #a78bfa);
+  background: var(--h-em);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -96,17 +117,17 @@
   max-width: 560px;
   font-size: clamp(17px, 1.6vw, 20px);
   line-height: 1.5;
-  color: rgba(245, 245, 247, 0.72);
+  color: var(--h-soft);
 }
-/* What I build, as chips on the dark hero */
+/* What I build, as chips */
 .v2-chips {
   margin-top: 24px;
   max-width: 600px;
 }
 .v2-hero .v2-chips .mini-chip {
-  color: rgba(245, 245, 247, 0.88);
-  background: rgba(255, 255, 255, 0.07);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  color: var(--h-ink);
+  background: var(--h-chip-bg);
+  box-shadow: inset 0 0 0 1px var(--h-chip-line);
 }
 .v2-actions {
   display: flex;
@@ -130,25 +151,25 @@
   text-decoration: none;
 }
 .v2-btn-primary {
-  background: #f5f5f7;
-  color: #07090c;
+  background: var(--h-btn-bg);
+  color: var(--h-btn-ink);
 }
 .v2-btn-ghost {
-  color: #f5f5f7;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--h-ink);
+  border: 1px solid var(--h-ghost-line);
 }
 .v2-btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--h-hover);
 }
 
 /* The live products, each a link to its site */
 .v2-board {
-  background: rgba(255, 255, 255, 0.045);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--h-card);
+  border: 1px solid var(--h-card-line);
   border-radius: 24px;
   padding: 12px;
   backdrop-filter: blur(12px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  box-shadow: var(--h-card-shadow);
 }
 .v2-board ul {
   list-style: none;
@@ -167,7 +188,7 @@
   transition: background 0.15s ease;
 }
 .v2-board li a:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--h-hover);
   text-decoration: none;
 }
 .v2-board img {
@@ -176,6 +197,7 @@
   border-radius: 8px;
   background: #fff;
   object-fit: contain;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
 .v2-board-name {
   display: block;
@@ -187,18 +209,18 @@
   display: block;
   font-family: var(--font-mono);
   font-size: 12px;
-  color: rgba(245, 245, 247, 0.5);
+  color: var(--h-faint);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .v2-go {
   font-size: 14px;
-  color: rgba(245, 245, 247, 0.35);
+  color: var(--h-faint);
   transition: color 0.15s ease, transform 0.15s ease;
 }
 .v2-board li a:hover .v2-go {
-  color: #f5f5f7;
+  color: var(--h-ink);
   transform: translate(2px, -2px);
 }
 
@@ -393,6 +415,13 @@
   margin: 28px 0 0;
 }
 
+.v2-client {
+  padding-top: 64px;
+}
+.v2-client .v2-eyebrow {
+  margin-top: 0;
+}
+
 /* ---------- Small screens ---------- */
 @media (max-width: 900px) {
   #hero.v2-hero {
@@ -446,6 +475,54 @@
 }
 
 /* ---------- Dark theme ---------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .v2-hero {
+    --h-ink: #f5f5f7;
+    --h-soft: rgba(245, 245, 247, 0.68);
+    --h-faint: rgba(245, 245, 247, 0.42);
+    --h-line: rgba(255, 255, 255, 0.045);
+    --h-glow: rgba(94, 230, 154, 0.09);
+    --h-card: rgba(255, 255, 255, 0.045);
+    --h-card-line: rgba(255, 255, 255, 0.1);
+    --h-card-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    --h-hover: rgba(255, 255, 255, 0.06);
+    --h-btn-bg: #f5f5f7;
+    --h-btn-ink: #07090c;
+    --h-ghost-line: rgba(255, 255, 255, 0.22);
+    --h-chip-bg: rgba(255, 255, 255, 0.07);
+    --h-chip-line: rgba(255, 255, 255, 0.1);
+    --h-avatar-line: rgba(255, 255, 255, 0.18);
+    --h-em: linear-gradient(92deg, #5ee69a, #4cc9f0 55%, #a78bfa);
+    --h-bg:
+      radial-gradient(900px 520px at 8% -10%, rgba(41, 196, 107, 0.26), transparent 62%),
+      radial-gradient(760px 520px at 104% 110%, rgba(0, 113, 227, 0.28), transparent 62%),
+      radial-gradient(520px 360px at 70% 10%, rgba(175, 82, 222, 0.14), transparent 70%),
+      #07090c;
+  }
+}
+:root[data-theme="dark"] .v2-hero {
+  --h-ink: #f5f5f7;
+  --h-soft: rgba(245, 245, 247, 0.68);
+  --h-faint: rgba(245, 245, 247, 0.42);
+  --h-line: rgba(255, 255, 255, 0.045);
+  --h-glow: rgba(94, 230, 154, 0.09);
+  --h-card: rgba(255, 255, 255, 0.045);
+  --h-card-line: rgba(255, 255, 255, 0.1);
+  --h-card-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  --h-hover: rgba(255, 255, 255, 0.06);
+  --h-btn-bg: #f5f5f7;
+  --h-btn-ink: #07090c;
+  --h-ghost-line: rgba(255, 255, 255, 0.22);
+  --h-chip-bg: rgba(255, 255, 255, 0.07);
+  --h-chip-line: rgba(255, 255, 255, 0.1);
+  --h-avatar-line: rgba(255, 255, 255, 0.18);
+  --h-em: linear-gradient(92deg, #5ee69a, #4cc9f0 55%, #a78bfa);
+  --h-bg:
+    radial-gradient(900px 520px at 8% -10%, rgba(41, 196, 107, 0.26), transparent 62%),
+    radial-gradient(760px 520px at 104% 110%, rgba(0, 113, 227, 0.28), transparent 62%),
+    radial-gradient(520px 360px at 70% 10%, rgba(175, 82, 222, 0.14), transparent 70%),
+    #07090c;
+}
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .v2-no { color: hsl(var(--hue), 75%, 66%); }
   :root:not([data-theme="light"]) .v2-chart .v2-no { color: var(--color-ink-soft); }
