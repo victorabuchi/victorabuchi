@@ -2263,64 +2263,239 @@ span.example-ref {
   max-width: 40rem;
 }
 
-/* two rows of logos drifting in opposite directions */
-.sk-marquee {
-  display: grid;
-  gap: 14px;
-  margin: clamp(2.5rem, 6vw, 4rem) calc(-1 * var(--gutter)) 0;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+/* the stack as an exploded diagram: five layers stacked like plates, each with its tools and a label beside it.
+   Nothing moves on its own; hovering opens the stack a little and brings a layer forward. */
+.sk-layers {
+  --gap: 100px;
+  --slab: 236px;
+  position: relative;
+  max-width: 62rem;
+  margin: clamp(2.5rem, 6vw, 4rem) auto 0;
 }
 
-.sk-row {
-  display: flex;
-  width: max-content;
-  animation: sk-left 55s linear infinite;
-}
-
-.sk-row-reverse {
-  animation-name: sk-right;
-  animation-duration: 65s;
-}
-
-.sk-marquee:hover .sk-row {
-  animation-play-state: paused;
-}
-
-.sk-set {
-  display: flex;
-  gap: 14px;
+.sk-layer-list {
+  position: relative;
+  height: calc(4 * var(--gap) + var(--slab) * 1.02);
   margin: 0;
-  padding: 0 14px 0 0;
+  padding: 0;
   list-style: none;
+  transition: height 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.sk-tile {
-  display: grid;
-  place-items: center;
-  width: 4.75rem;
-  height: 4.75rem;
-  padding: 0.85rem;
-  background: #fff;
-  border-radius: 22px;
-  box-shadow: 0 0 0 1px rgba(128, 128, 128, 0.2), 0 8px 24px rgba(0, 0, 0, 0.16);
+.sk-layers:hover {
+  --gap: 112px;
 }
 
-.sk-tile img {
+.sk-layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(var(--i) * var(--gap));
+  height: var(--slab);
+  z-index: calc(10 - var(--i));
+  /* the layers' boxes overlap; only a plate or its label answers the pointer */
+  pointer-events: none;
+  transition: top 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+  animation: sk-drop 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--i) * 90ms + 150ms);
+}
+
+.sk-slab {
+  position: absolute;
+  left: 9%;
+  top: 0;
+  width: var(--slab);
+  height: var(--slab);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 18px 24px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, hsla(var(--h), 80%, 99%, 0.94), hsla(var(--h), 55%, 93%, 0.9));
+  border: 1px solid hsla(var(--h), 30%, 50%, 0.16);
+  /* the plate's edge, then its shadow on the plate below */
+  box-shadow: 1px 1px 0 hsl(var(--h), 25%, 84%), 2px 2px 0 hsl(var(--h), 25%, 82%), 3px 3px 0 hsl(var(--h), 25%, 80%),
+    4px 4px 0 hsl(var(--h), 25%, 78%), 5px 5px 0 hsl(var(--h), 25%, 76%), 6px 6px 0 hsl(var(--h), 25%, 74%),
+    26px 26px 50px rgba(20, 30, 60, 0.14);
+  transform: rotateX(58deg) rotateZ(-45deg);
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* the logos lie in a row along the plate's front edge, the part no plate above ever covers */
+.sk-slab-logos {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.sk-slab-logos img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
-@keyframes sk-left {
-  to { transform: translateX(-50%); }
+.sk-slab,
+.sk-layer-text {
+  pointer-events: auto;
 }
 
-@keyframes sk-right {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+.sk-layer-text {
+  position: absolute;
+  top: calc(var(--slab) / 2);
+  left: calc(9% + var(--slab) * 1.37 + 3.5rem);
+  right: 0;
+  transform: translateY(-50%);
+}
+
+/* a hairline from the plate's corner to its label */
+.sk-layer-text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 0.75rem);
+  width: 2.75rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsla(var(--h), 40%, 50%, 0.5));
+}
+
+.sk-layer-name {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: hsl(var(--h), 55%, 42%);
+}
+
+.sk-layer-tools {
+  margin: 4px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+}
+
+.sk-layer-note {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: var(--color-ink-soft);
+}
+
+.sk-layer:hover .sk-slab {
+  transform: rotateX(58deg) rotateZ(-45deg) translateZ(18px);
+}
+
+.sk-layer:hover .sk-slab-logos img {
+  filter: none;
+  opacity: 1;
+}
+
+.sk-layer:hover .sk-layer-tools {
+  color: hsl(var(--h), 60%, 38%);
+}
+
+@keyframes sk-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-28px);
+  }
+}
+
+/* phones and narrow windows: the layers as a plain list */
+@media (max-width: 52rem) {
+  .sk-layer-list {
+    height: auto;
+    display: grid;
+    gap: 12px;
+  }
+
+  .sk-layer {
+    position: static;
+    height: auto;
+    pointer-events: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 16px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, hsla(var(--h), 80%, 99%, 0.9), hsla(var(--h), 55%, 94%, 0.85));
+    border: 1px solid hsla(var(--h), 30%, 50%, 0.14);
+  }
+
+  .sk-slab {
+    position: static;
+    width: auto;
+    height: auto;
+    display: block;
+    padding: 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    transform: none !important;
+  }
+
+  .sk-slab-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 26px);
+    gap: 8px;
+  }
+
+  .sk-slab-logos img {
+    width: 26px;
+    height: 26px;
+    filter: none;
+    opacity: 1;
+  }
+
+  .sk-layer-text {
+    position: static;
+    transform: none;
+  }
+
+  .sk-layer-text::before {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sk-slab {
+    background: linear-gradient(135deg, hsla(var(--h), 22%, 22%, 0.96), hsla(var(--h), 20%, 14%, 0.96));
+    border-color: hsla(var(--h), 40%, 70%, 0.16);
+    box-shadow: 1px 1px 0 hsl(var(--h), 14%, 12%), 2px 2px 0 hsl(var(--h), 14%, 11%), 3px 3px 0 hsl(var(--h), 14%, 10%),
+      4px 4px 0 hsl(var(--h), 14%, 9%), 5px 5px 0 hsl(var(--h), 14%, 8%), 6px 6px 0 hsl(var(--h), 14%, 7%),
+      26px 26px 50px rgba(0, 0, 0, 0.5);
+  }
+  :root:not([data-theme="light"]) .sk-slab-logos .sk-mono { filter: grayscale(1) invert(1); }
+  :root:not([data-theme="light"]) .sk-layer:hover .sk-slab-logos .sk-mono { filter: invert(1); }
+  :root:not([data-theme="light"]) .sk-layer-name { color: hsl(var(--h), 70%, 70%); }
+  :root:not([data-theme="light"]) .sk-layer:hover .sk-layer-tools { color: hsl(var(--h), 75%, 74%); }
+}
+
+:root[data-theme="dark"] .sk-slab {
+  background: linear-gradient(135deg, hsla(var(--h), 22%, 22%, 0.96), hsla(var(--h), 20%, 14%, 0.96));
+  border-color: hsla(var(--h), 40%, 70%, 0.16);
+  box-shadow: 1px 1px 0 hsl(var(--h), 14%, 12%), 2px 2px 0 hsl(var(--h), 14%, 11%), 3px 3px 0 hsl(var(--h), 14%, 10%),
+    4px 4px 0 hsl(var(--h), 14%, 9%), 5px 5px 0 hsl(var(--h), 14%, 8%), 6px 6px 0 hsl(var(--h), 14%, 7%),
+    26px 26px 50px rgba(0, 0, 0, 0.5);
+}
+:root[data-theme="dark"] .sk-slab-logos .sk-mono { filter: grayscale(1) invert(1); }
+:root[data-theme="dark"] .sk-layer:hover .sk-slab-logos .sk-mono { filter: invert(1); }
+:root[data-theme="dark"] .sk-layer-name { color: hsl(var(--h), 70%, 70%); }
+:root[data-theme="dark"] .sk-layer:hover .sk-layer-tools { color: hsl(var(--h), 75%, 74%); }
+
+@media (max-width: 52rem) {
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .sk-layer { background: hsla(var(--h), 20%, 16%, 0.9); border-color: hsla(var(--h), 40%, 70%, 0.14); }
+    :root:not([data-theme="light"]) .sk-slab { background: none; border: 0; box-shadow: none; }
+  }
+  :root[data-theme="dark"] .sk-layer { background: hsla(var(--h), 20%, 16%, 0.9); border-color: hsla(var(--h), 40%, 70%, 0.14); }
+  :root[data-theme="dark"] .sk-slab { background: none; border: 0; box-shadow: none; }
 }
 
 /* explorer: vertical tabs + panel of skill cards */
@@ -2835,7 +3010,7 @@ span.example-ref {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sk-row,
+  .sk-layer,
   .stack-link::after,
   .js-skills .skills-panel.is-active {
     animation: none;
@@ -2845,24 +3020,10 @@ span.example-ref {
     display: none;
   }
 
-  .sk-marquee {
-    margin-inline: 0;
-    overflow: visible;
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
-
-  .sk-row {
-    width: auto;
-  }
-
-  .sk-set {
-    flex-wrap: wrap;
-  }
-
-  .sk-set[aria-hidden="true"],
-  .sk-set li:nth-child(n + 9) {
-    display: none;
+  .sk-layer,
+  .sk-layer-list,
+  .sk-slab {
+    transition: none;
   }
 }
 

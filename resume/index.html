@@ -25,7 +25,7 @@
   <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/icon-180.png">
-  <link rel="stylesheet" href="/css/style.css?v=275ef69fa1">
+  <link rel="stylesheet" href="/css/style.css?v=df7e13c6e7">
   <script defer data-project="p_babgy4em4p" src="https://statiku.com/s.js"></script>
 </head>
 <body>
@@ -52,7 +52,7 @@
   </header>
 
   <main class="rs">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Victor Abuchi", "jobTitle": "Software Developer", "url": "https://victorabuchi.com/resume/", "email": "contact@victorabuchi.com", "telephone": "+358 46 939 5024", "image": "https://victorabuchi.com/assets/images/victor-full.jpg", "sameAs": ["https://www.linkedin.com/in/victor-abuchi-06b086338", "https://github.com/victorabuchi", "https://victorabuchi.com"], "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Eastern Finland"}, "address": {"@type": "PostalAddress", "addressLocality": "Helsinki", "addressCountry": "FI"}, "knowsLanguage": ["English", "Finnish"], "knowsAbout": ["TypeScript", "React", "Next.js", "Node.js", "Fastify", "PostgreSQL", "React Native", "Shopify app development", "Shopify theme development", "Web application development"], "worksFor": {"@type": "Organization", "name": "Victor Abuchi Oy"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Victor Abuchi", "jobTitle": "Software Developer", "url": "https://victorabuchi.com/resume/", "email": "contact@victorabuchi.com", "telephone": "+358 46 939 5024", "image": "https://victorabuchi.com/assets/images/victor-full.jpg", "sameAs": ["https://www.linkedin.com/in/victor-abuchi-06b086338", "https://github.com/victorabuchi", "https://victorabuchi.com"], "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Eastern Finland"}, "address": {"@type": "PostalAddress", "addressLocality": "Helsinki", "addressCountry": "FI"}, "knowsLanguage": ["English", "Finnish"], "knowsAbout": ["TypeScript", "React", "Next.js", "Node.js", "Fastify", "PostgreSQL", "React Native", "Shopify app development", "Shopify theme development", "Web application development", "Swift", "macOS app development", "Docker"], "worksFor": {"@type": "Organization", "name": "Victor Abuchi Oy"}}</script>
 
     <section class="ab-hero rs-hero" id="rs-top">
       <div class="rs-hero-grid">
@@ -89,14 +89,14 @@
       <div class="section-head">
         <h2 class="section-title">Profile</h2>
       </div>
-      <p class="rs-summary">Software developer and second-year Computer Science student at the University of Eastern Finland. I design and build full-stack web platforms, Android and iOS apps, Shopify apps and themes, and custom websites from scratch, and I take problems from first observation to a launched product. Rannikon, built for a Finnish berry farm, now runs a whole season for 300+ workers in five languages.</p>
+      <p class="rs-summary">Software developer and second-year Computer Science student at the University of Eastern Finland. I design and build full-stack web platforms, Android and iOS apps, macOS apps, Shopify apps and themes, and custom websites from scratch, and I run them on my own servers. I take problems from first observation to a launched product. Rannikon, built for a Finnish berry farm, runs a whole season for 300+ workers in five languages, and Statiku, my analytics platform, measures Notchlight, my paid Mac app.</p>
       <dl class="rs-facts">
           <div class="rs-fact"><dt>Role</dt><dd>Software Developer</dd></div>
-          <div class="rs-fact"><dt>Focus</dt><dd>Web platforms, mobile apps, Shopify</dd></div>
+          <div class="rs-fact"><dt>Focus</dt><dd>Web platforms, mobile and macOS apps, Shopify</dd></div>
           <div class="rs-fact"><dt>Location</dt><dd>Helsinki, Finland</dd></div>
           <div class="rs-fact"><dt>Education</dt><dd>BSc Computer Science (2nd year), University of Eastern Finland</dd></div>
           <div class="rs-fact"><dt>Also</dt><dd>Student Ambassador, University of Eastern Finland</dd></div>
-          <div class="rs-fact"><dt>Core stack</dt><dd>TypeScript · React · Next.js · Node.js · Fastify · PostgreSQL</dd></div>
+          <div class="rs-fact"><dt>Core stack</dt><dd>TypeScript · React · Next.js · Node.js · PostgreSQL · Swift · Docker</dd></div>
           <div class="rs-fact"><dt>Working style</dt><dd>Spots a problem, builds the fix, presents it</dd></div>
           <div class="rs-fact"><dt>Languages</dt><dd>English (native), Finnish (learning)</dd></div>
           <div class="rs-fact"><dt>Availability</dt><dd>Full-time, part-time, internship or freelance, remote or on-site.</dd></div>
@@ -109,100 +109,136 @@
         <h2 class="section-title">Experience</h2>
       </div>
       <div class="rs-timeline">
+          <article class="rs-entry reveal" id="exp-statiku">
+            <div class="rs-entry-meta">
+              <p class="rs-dates">Oct 2026 – present</p>
+              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/statiku.svg" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://statiku.com" target="_blank" rel="noopener">Statiku</a></span></div>
+            </div>
+            <div class="rs-entry-body">
+              <h3 class="rs-role">Founder &amp; Full-Stack Developer</h3>
+              <p class="rs-lede">Live analytics for websites, SaaS and apps that follows one journey from the first visit to a download, install, trial and purchase. Notchlight is its first customer.</p>
+              <ul class="rs-bullets"><li>Built a tracking script under 10 KB with no cookies, and an ingest service that writes events in batches to PostgreSQL partitioned by month, with visitor hashes that change daily and no stored IP addresses.</li><li>Built a Swift package for macOS and iOS apps that credits each install to the website visit it was downloaded from, with versions, trials and licences.</li><li>Built the dashboard: reports against the previous period, filters on any breakdown, CSV export, and a live view with a globe that changes the moment someone arrives or leaves.</li><li>Added history imports from Google Analytics, Plausible and GitHub release downloads, plans and billing through Polar, and email alerts when a site goes quiet.</li><li>Run it on my own server on Oracle Cloud in Docker behind Caddy, with a copy of the database sent off the server every night.</li></ul>
+              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/typescript.svg" alt="" width="16" height="16">TypeScript</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/nodejs.svg" alt="" width="16" height="16">Node.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/swift.svg" alt="" width="16" height="16">Swift</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/d3.svg" alt="" width="16" height="16">D3</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/docker.svg" alt="" width="16" height="16">Docker</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/caddy.svg" alt="" width="16" height="16">Caddy</li></ul>
+            </div>
+          </article>
+          <article class="rs-entry reveal" id="exp-notchlight">
+            <div class="rs-entry-meta">
+              <p class="rs-dates">Oct 2026 – present</p>
+              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/notchlight.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://notchlight.com" target="_blank" rel="noopener">Notchlight</a></span></div>
+            </div>
+            <div class="rs-entry-body">
+              <h3 class="rs-role">Founder &amp; macOS Developer</h3>
+              <p class="rs-lede">Widgets for the macOS lock screen and a Dynamic Island around the notch, sold as a paid app with a lifetime licence and a 7-day free trial.</p>
+              <ul class="rs-bullets"><li>Built 21 widgets (weather, calendar, Apple Music's time-synced lyrics, a live globe and more) drawn in a layer above the lock screen itself, plus a Dynamic Island for MacBooks with a notch.</li><li>Built Light, a panel that opens from the notch with music, a mirror, calendar, notes, timers and to-dos side by side, with lyrics for every song that has them, from Apple Music or LRCLIB.</li><li>Released version 1.5 with its own website, pricing and in-app updates, listed on MacNative; Statiku measures the website and the downloads.</li></ul>
+              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/swift.svg" alt="" width="16" height="16">Swift</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/swift.svg" alt="" width="16" height="16">SwiftUI</li></ul>
+            </div>
+          </article>
+          <article class="rs-entry reveal" id="exp-kuopas">
+            <div class="rs-entry-meta">
+              <p class="rs-dates">Sep 2026 – present</p>
+              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/kuopas.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://kuopas.com" target="_blank" rel="noopener">Kuopas</a></span></div>
+            </div>
+            <div class="rs-entry-body">
+              <h3 class="rs-role">Freelance Full-Stack &amp; Mobile Developer</h3>
+              <p class="rs-lede">The booking system for Kuopas student housing in Kuopio, on the web and as a phone app, in Finnish and English.</p>
+              <ul class="rs-bullets"><li>Residents book laundry, sauna, parking and shared rooms, see when each one is next free, bring a neighbour along, check in and get a reminder before their turn.</li><li>Managers run the buildings, apartments, residents, staff and rules in one place, and rent parking the way the housing office does, by registration plate and start date.</li><li>Built the iPhone app in Expo and React Native on the web app's own API, with sign-in by a six-digit code sent by email; it is in testing on TestFlight.</li><li>Built on Slotnook's codebase as a deployment of its own at kuopas.com, with email through Brevo, on its own server.</li></ul>
+              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Next.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/typescript.svg" alt="" width="16" height="16">TypeScript</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/prisma.svg" alt="" width="16" height="16">Prisma</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React Native</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/expo.svg)" aria-hidden="true"></span>Expo</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/brevo.svg" alt="" width="16" height="16">Brevo</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/docker.svg" alt="" width="16" height="16">Docker</li></ul>
+            </div>
+          </article>
+          <article class="rs-entry reveal" id="exp-slotnook">
+            <div class="rs-entry-meta">
+              <p class="rs-dates">Sep 2026 – present</p>
+              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/slotnook.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://slotnook.fi" target="_blank" rel="noopener">Slotnook</a></span></div>
+            </div>
+            <div class="rs-entry-body">
+              <h3 class="rs-role">Founder &amp; Full-Stack Developer</h3>
+              <p class="rs-lede">White-label booking for student housing organizations: one deployment serves many organizations, each on its own address with its own brand.</p>
+              <ul class="rs-bullets"><li>Built booking for laundry, sauna, parking and shared spaces with a live booking board, weekly limits, check-in that releases no-shows automatically, and a notice when a slot frees up.</li><li>Built multi-tenant routing: each organization is reached through its own subdomain or its own domain, which gets HTTPS automatically as soon as its DNS points at the server.</li><li>Gave each organization its own logo, colours and texts, a staff area for reports, residents and settings, and resident pages for bookings, problem reports and help.</li></ul>
+              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Next.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/typescript.svg" alt="" width="16" height="16">TypeScript</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/prisma.svg" alt="" width="16" height="16">Prisma</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/caddy.svg" alt="" width="16" height="16">Caddy</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/docker.svg" alt="" width="16" height="16">Docker</li></ul>
+            </div>
+          </article>
+          <article class="rs-entry reveal" id="exp-rannikon">
+            <div class="rs-entry-meta">
+              <p class="rs-dates">Jun 2026 – present</p>
+              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/rannikon.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="/case-studies/rannikon/">Rannikon Puutarha</a></span></div>
+            </div>
+            <div class="rs-entry-body">
+              <h3 class="rs-role">Freelance Full-Stack Developer</h3>
+              <p class="rs-lede">Designed, built and launched a workforce management platform for a berry farm in Halikko, Finland, replacing paper payroll forms, notebooks and handwritten logs.</p>
+              <ul class="rs-bullets"><li>Replaced four paper payroll forms with one system used by 300+ seasonal workers across 6 house groups, in 5 languages.</li><li>Built an hour-calculation engine on the backend so every device shows the same result, eliminating manual calculation errors.</li><li>Delivered six role-based experiences (worker, supervisor, housemaster, payroll, admin and more) with PDF and Excel exports and email invitations.</li><li>Cut payroll verification from days to minutes with a check that compares supervisor-recorded and worker-submitted hours.</li><li>Shipped a web app, an Android app on Google Play and a real-time display for the house televisions.</li><li>Proposed the project directly to the farm manager, who approved and endorsed it and introduced me to other companies.</li><li>Added leave and holiday requests that pass from worker to housemaster to admin, and moved the platform to its own server on Oracle Cloud for the next season, with nightly backups kept off the server.</li></ul>
+              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Next.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/fastify.svg)" aria-hidden="true"></span>Fastify</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React Native</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/expo.svg)" aria-hidden="true"></span>Expo</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/resend.svg)" aria-hidden="true"></span>Resend</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/docker.svg" alt="" width="16" height="16">Docker</li></ul>
+            </div>
+          </article>
+          <article class="rs-entry reveal" id="exp-pursecast">
+            <div class="rs-entry-meta">
+              <p class="rs-dates">Sep 2026 – present</p>
+              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/pursecast.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://pursecast.com" target="_blank" rel="noopener">Pursecast</a></span></div>
+            </div>
+            <div class="rs-entry-body">
+              <h3 class="rs-role">Founder &amp; Full-Stack &amp; Mobile Developer</h3>
+              <p class="rs-lede">Personal finance that looks ahead, as a web app and a phone app.</p>
+              <ul class="rs-bullets"><li>Built Money Weather, a day-by-day forecast of the balance with storm warnings before a tight week, from bills, income, budgets and the costs already on your Google Calendar.</li><li>Built spending logged in two seconds, budgets, owed money, Worth-It ratings, Timeline Forks for what-if futures, bank connections and statement imports.</li><li>Built the Expo and React Native app with the web app's screens and logic, and sign-in with Google and Apple on both.</li></ul>
+              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Next.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/typescript.svg" alt="" width="16" height="16">TypeScript</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/prisma.svg" alt="" width="16" height="16">Prisma</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React Native</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/expo.svg)" aria-hidden="true"></span>Expo</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/docker.svg" alt="" width="16" height="16">Docker</li></ul>
+            </div>
+          </article>
+          <article class="rs-entry reveal" id="exp-chronkeep">
+            <div class="rs-entry-meta">
+              <p class="rs-dates">Oct 2026 – present</p>
+              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/chronkeep.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://chronkeep.com" target="_blank" rel="noopener">ChronKeep</a></span></div>
+            </div>
+            <div class="rs-entry-body">
+              <h3 class="rs-role">Founder &amp; Full-Stack &amp; Mobile Developer</h3>
+              <p class="rs-lede">A calendar and to-do list that keeps reminding you until the assignment is done, as a web app and a phone app.</p>
+              <ul class="rs-bullets"><li>Built one calendar for lessons, events and assignments, a quick add that reads a typed sentence into a task, and reminders that keep nagging every few minutes until ticked off.</li><li>Built the Expo and React Native app with reminders scheduled on the phone so they arrive with no signal, syncing to the web app's account within about a minute.</li><li>Added browser push notifications, repeating reminders and an installable web app.</li></ul>
+              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/javascript.svg" alt="" width="16" height="16">JavaScript</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/nodejs.svg" alt="" width="16" height="16">Node.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React Native</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/expo.svg)" aria-hidden="true"></span>Expo</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/typescript.svg" alt="" width="16" height="16">TypeScript</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/docker.svg" alt="" width="16" height="16">Docker</li></ul>
+            </div>
+          </article>
           <article class="rs-entry reveal" id="exp-onshipy">
             <div class="rs-entry-meta">
-              <p class="rs-dates">Apr – Jul 2026</p>
+              <p class="rs-dates">Apr 2026 – present</p>
               <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/onshipy.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://onshipy.com" target="_blank" rel="noopener">Onshipy</a></span></div>
             </div>
             <div class="rs-entry-body">
               <h3 class="rs-role">Founder &amp; Full-Stack Developer</h3>
               <p class="rs-lede">Dropshipping automation for resellers: import a product from any website, price it, and push it to a Shopify store, with fulfilment handled automatically.</p>
               <ul class="rs-bullets"><li>Built the product importer: a scraper on axios and Cheerio with a dedicated Nike parser, automatic currency detection and EU price normalisation.</li><li>Designed pricing and listing tools: manual or margin-based pricing, a live profit calculator, and filterable listing tables.</li><li>Implemented one-click Shopify OAuth, push-to-store for single or all listings, and a webhook endpoint for custom storefronts.</li><li>Built a browse experience over 900+ brands in 48 categories with trending indicators and a live activity feed.</li><li>Added subscription billing with Stripe across Free, Pro and Enterprise plans.</li></ul>
-              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Next.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/fastify.svg)" aria-hidden="true"></span>Fastify</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/stripe.svg" alt="" width="16" height="16">Stripe</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/cheerio.svg" alt="" width="16" height="16">Cheerio</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/shopify-logo.png" alt="" width="16" height="16">Shopify Polaris</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/render.svg" alt="" width="16" height="16">Render</li></ul>
-            </div>
-          </article>
-          <article class="rs-entry reveal" id="exp-rannikon">
-            <div class="rs-entry-meta">
-              <p class="rs-dates">Jun – Sep 2026</p>
-              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/rannikon.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="/case-studies/rannikon/">Rannikon Puutarha</a></span></div>
-            </div>
-            <div class="rs-entry-body">
-              <h3 class="rs-role">Freelance Full-Stack Developer</h3>
-              <p class="rs-lede">Designed, built and launched a workforce management platform for a berry farm in Halikko, Finland, replacing paper payroll forms, notebooks and handwritten logs.</p>
-              <ul class="rs-bullets"><li>Replaced four paper payroll forms with one system used by 300+ seasonal workers across 6 house groups, in 5 languages.</li><li>Built an hour-calculation engine on the backend so every device shows the same result, eliminating manual calculation errors.</li><li>Delivered six role-based experiences (worker, supervisor, housemaster, payroll, admin and more) with PDF and Excel exports and email invitations.</li><li>Cut payroll verification from days to minutes with a check that compares supervisor-recorded and worker-submitted hours.</li><li>Shipped a web app, an Android app on Google Play and a real-time display for the house televisions.</li><li>Proposed the project directly to the farm manager, who approved and endorsed it and introduced me to other companies.</li></ul>
-              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Next.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/fastify.svg)" aria-hidden="true"></span>Fastify</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/supabase.svg" alt="" width="16" height="16">Supabase</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React Native</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/expo.svg)" aria-hidden="true"></span>Expo</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/resend.svg)" aria-hidden="true"></span>Resend</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/render.svg" alt="" width="16" height="16">Render</li></ul>
+              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Next.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/fastify.svg)" aria-hidden="true"></span>Fastify</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/stripe.svg" alt="" width="16" height="16">Stripe</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/cheerio.svg" alt="" width="16" height="16">Cheerio</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/shopify-logo.png" alt="" width="16" height="16">Shopify Polaris</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/docker.svg" alt="" width="16" height="16">Docker</li></ul>
             </div>
           </article>
           <article class="rs-entry reveal" id="exp-knewler">
             <div class="rs-entry-meta">
-              <p class="rs-dates">May 2026</p>
+              <p class="rs-dates">Oct – Nov 2026</p>
               <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/knewler.svg" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://github.com/victorabuchi/knewler" target="_blank" rel="noopener">Knewler</a></span></div>
             </div>
             <div class="rs-entry-body">
-              <h3 class="rs-role">Full-Stack Developer</h3>
-              <p class="rs-lede">A multi-tenant eLearning platform where universities, companies and sports clubs launch a branded, fully isolated training environment in minutes.</p>
-              <ul class="rs-bullets"><li>Built multi-tenant onboarding with an isolated environment and JWT-scoped sessions per institution.</li><li>Implemented courses, a student registry, timetable scheduling with recurrence, and auto-issued certificates with unique verification codes.</li><li>Built a timed exam engine with a question bank (multiple choice, essay, true/false, file upload), shuffling and tab-lock anti-cheat.</li><li>Added custom domain support so each tenant can point its own domain at its environment.</li></ul>
-              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Next.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/fastify.svg)" aria-hidden="true"></span>Fastify</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/supabase.svg" alt="" width="16" height="16">Supabase</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/resend.svg)" aria-hidden="true"></span>Resend</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/render.svg" alt="" width="16" height="16">Render</li></ul>
+              <h3 class="rs-role">Developer</h3>
+              <p class="rs-lede">A study app for university courses: learn each week, practise it with spaced repetition and test yourself with mock exams.</p>
+              <ul class="rs-bullets"><li>Built learn, practice and mock-exam modes for each week, with wrong answers coming back sooner (Leitner boxes), code exercises with tests, and progress charts for each course.</li><li>Built an automata lab that turns an automaton typed as text into a JFLAP-style diagram, steps through inputs, tests many strings at once and exports SVG, PNG or JFLAP files.</li><li>Added a glossary that searches Wikipedia live and keeps saved terms with your own notes; progress stays in the browser.</li></ul>
+              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/vite.svg" alt="" width="16" height="16">Vite</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/bootstrap.svg" alt="" width="16" height="16">Bootstrap</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/javascript.svg" alt="" width="16" height="16">JavaScript</li></ul>
             </div>
           </article>
-          <article class="rs-entry reveal" id="exp-kuopas">
+          <article class="rs-entry reveal" id="exp-macxray">
             <div class="rs-entry-meta">
-              <p class="rs-dates">Sep 2026</p>
-              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/kuopas.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://kuopas.com" target="_blank" rel="noopener">Kuopas</a></span></div>
-            </div>
-            <div class="rs-entry-body">
-              <h3 class="rs-role">Full-Stack &amp; Mobile Developer</h3>
-              <p class="rs-lede">A student housing app for Kuopas in Kuopio, as a web app and a mobile app, in Finnish and English.</p>
-              <ul class="rs-bullets"><li>Built building chat, a noticeboard with reactions and comments, complaints, laundry, sauna and parking booking, and staff tools.</li><li>Ported the app to Expo and React Native through a mobile API bridge on the web app’s backend, so both share the same data and rules.</li></ul>
-              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Next.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/typescript.svg" alt="" width="16" height="16">TypeScript</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/prisma.svg" alt="" width="16" height="16">Prisma</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React Native</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/expo.svg)" aria-hidden="true"></span>Expo</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/tailwindcss.svg" alt="" width="16" height="16">Tailwind CSS</li></ul>
-            </div>
-          </article>
-          <article class="rs-entry reveal" id="exp-chronkeep">
-            <div class="rs-entry-meta">
-              <p class="rs-dates">Oct 2026</p>
-              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/chronkeep.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://chronkeep.com" target="_blank" rel="noopener">ChronKeep</a></span></div>
-            </div>
-            <div class="rs-entry-body">
-              <h3 class="rs-role">Full-Stack &amp; Mobile Developer</h3>
-              <p class="rs-lede">A calendar and to-do list that keeps reminding you until the assignment is done, as a web app and a mobile app.</p>
-              <ul class="rs-bullets"><li>Built one calendar for lessons, events and assignments, a quick add that reads a typed sentence into a task, and reminders that keep nagging every few minutes until ticked off.</li><li>Built the Expo and React Native app with reminders scheduled on the phone so they arrive with no signal, syncing to the web app's account within about a minute.</li></ul>
-              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/javascript.svg" alt="" width="16" height="16">JavaScript</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/nodejs.svg" alt="" width="16" height="16">Node.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/supabase.svg" alt="" width="16" height="16">Supabase</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/render.svg" alt="" width="16" height="16">Render</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React Native</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/expo.svg)" aria-hidden="true"></span>Expo</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/typescript.svg" alt="" width="16" height="16">TypeScript</li></ul>
-            </div>
-          </article>
-          <article class="rs-entry reveal" id="exp-pursecast">
-            <div class="rs-entry-meta">
-              <p class="rs-dates">Sep – Oct 2026</p>
-              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/pursecast.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://pursecast.com" target="_blank" rel="noopener">Pursecast</a></span></div>
-            </div>
-            <div class="rs-entry-body">
-              <h3 class="rs-role">Full-Stack &amp; Mobile Developer</h3>
-              <p class="rs-lede">A personal finance app, as a web app and a mobile app.</p>
-              <ul class="rs-bullets"><li>Built spending, bills and income, budgets, owed money, and a day-by-day "Money Weather" forecast of what's coming.</li><li>Built the Expo and React Native app, porting the web app's screens, copy and business logic 1:1 to a native experience.</li></ul>
-              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Next.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/typescript.svg" alt="" width="16" height="16">TypeScript</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/prisma.svg" alt="" width="16" height="16">Prisma</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React Native</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/expo.svg)" aria-hidden="true"></span>Expo</li></ul>
-            </div>
-          </article>
-          <article class="rs-entry reveal" id="exp-slotnook">
-            <div class="rs-entry-meta">
-              <p class="rs-dates">Sep – Oct 2026</p>
-              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/slotnook.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://slotnook.fi" target="_blank" rel="noopener">Slotnook</a></span></div>
-            </div>
-            <div class="rs-entry-body">
-              <h3 class="rs-role">Full-Stack Developer</h3>
-              <p class="rs-lede">White-label booking for student housing organizations.</p>
-              <ul class="rs-bullets"><li>Built laundry, sauna, parking and shared-space booking for multiple organizations from one deployment, each with its own branding and texts.</li><li>Built multi-tenant routing so each organization is reached through its own subdomain or a connected custom domain.</li></ul>
-              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/nextjs.svg)" aria-hidden="true"></span>Next.js</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/typescript.svg" alt="" width="16" height="16">TypeScript</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/prisma.svg" alt="" width="16" height="16">Prisma</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/postgresql.svg" alt="" width="16" height="16">PostgreSQL</li></ul>
-            </div>
-          </article>
-          <article class="rs-entry reveal" id="exp-notchlight">
-            <div class="rs-entry-meta">
-              <p class="rs-dates">Oct 2026</p>
-              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/notchlight.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://notchlight.com" target="_blank" rel="noopener">Notchlight</a></span></div>
+              <p class="rs-dates">Nov 2026</p>
+              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/macxray.png" alt="" width="40" height="40"></span><span class="rs-org-name"><a class="rs-org-link" href="https://victorabuchi.github.io/macxray-app/" target="_blank" rel="noopener">MacXray</a></span></div>
             </div>
             <div class="rs-entry-body">
               <h3 class="rs-role">macOS Developer</h3>
-              <p class="rs-lede">Widgets for the macOS lock screen and a Dynamic Island around the notch, shipped as a paid app.</p>
-              <ul class="rs-bullets"><li>Built 21 widgets (weather, calendar, Apple Music's time-synced lyrics, a live globe and more) drawn in a layer above the lock screen itself, plus a Dynamic Island for MacBooks with a notch.</li><li>Built Light, a panel that opens from the notch with music, a mirror, calendar, notes, timers and to-dos side by side, and shipped the product with its own website and pricing.</li></ul>
-              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/swift.svg" alt="" width="16" height="16">Swift</li></ul>
+              <p class="rs-lede">A Mac app that shows what the computer is doing, live and in plain English: every program, file write and connection, and why it happens.</p>
+              <ul class="rs-bullets"><li>Built live views of the Mac's insides from real readings: CPU cores, memory, disk writes, network traffic by company, Wi-Fi, Bluetooth, sound devices and the battery's fuel-gauge chip.</li><li>Built a clipboard history that keeps every format of a copy, a keyboard view of every program listening to keys (never which key), and processes drawn as icebergs with each one's family tree.</li><li>Prototyped it in Python, then shipped it as a native Swift app, signed and notarized, with its own website.</li></ul>
+              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/swift.svg" alt="" width="16" height="16">Swift</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/swift.svg" alt="" width="16" height="16">SwiftUI</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/python.svg" alt="" width="16" height="16">Python</li></ul>
+            </div>
+          </article>
+          <article class="rs-entry reveal" id="exp-snakebite">
+            <div class="rs-entry-meta">
+              <p class="rs-dates">Nov 2026</p>
+              <div class="rs-org"><span class="rs-logo"><img src="/assets/images/projects/snakebite.png" alt="" width="40" height="40"></span><span class="rs-org-name">Snake Bite</span></div>
+            </div>
+            <div class="rs-entry-body">
+              <h3 class="rs-role">Game Developer</h3>
+              <p class="rs-lede">Classic Snake in 3D for the Mac, with ten new mechanics that unlock as your best score climbs.</p>
+              <ul class="rs-bullets"><li>Built the game in SwiftUI and RealityKit: a 3D board, a snake that grows in the colours it eats, and ten mutators to mix and match, such as Tail Bite, Rewind, Venom, Tilting Board and Window Portals, where the snake crawls into a second window.</li><li>Wrote the App Store listing and a title screen where each mechanic unlocks at a score milestone.</li></ul>
+              <ul class="mini-chips rs-tech" aria-label="Tech"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/swift.svg" alt="" width="16" height="16">Swift</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/swift.svg" alt="" width="16" height="16">SwiftUI</li></ul>
             </div>
           </article>
           <article class="rs-entry reveal" id="exp-uef">
@@ -293,7 +329,7 @@
               <span class="project-card-logo"><img src="/assets/images/projects/knewler.svg" alt=""></span>
               <span class="project-card-tag">Web app</span>
               <h3 class="project-card-title">Knewler</h3>
-              <p class="project-card-text">Multi-tenant eLearning platform: universities, companies, and sports clubs launch a branded training environment in minutes.</p>
+              <p class="project-card-text">A study app for university courses: learn each week, practise it with spaced repetition, take mock exams, and draw automata in its lab.</p>
               <span class="project-card-cta">View on GitHub</span>
             </a>
             <a class="project-card" href="https://victorabuchi.github.io/macxray-app/" target="_blank" rel="noopener" style="--accent: 220">
@@ -345,6 +381,10 @@
             <ul class="mini-chips"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/react.svg" alt="" width="16" height="16">React Native</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/expo.svg)" aria-hidden="true"></span>Expo</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/capacitor.svg" alt="" width="16" height="16">Capacitor</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/flutter.svg" alt="" width="16" height="16">Flutter</li></ul>
           </article>
           <article class="tool-card">
+            <h3 class="tool-title">macOS</h3>
+            <ul class="mini-chips"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/swift.svg" alt="" width="16" height="16">Swift</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/swift.svg" alt="" width="16" height="16">SwiftUI</li></ul>
+          </article>
+          <article class="tool-card">
             <h3 class="tool-title">E-commerce</h3>
             <ul class="mini-chips"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/liquid.svg" alt="" width="16" height="16">Shopify Liquid</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/shopify-logo.png" alt="" width="16" height="16">Shopify App Development</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/shopify-logo.png" alt="" width="16" height="16">Shopify Polaris</li></ul>
           </article>
@@ -358,11 +398,11 @@
           </article>
           <article class="tool-card">
             <h3 class="tool-title">Infrastructure &amp; DevOps</h3>
-            <ul class="mini-chips"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/render.svg" alt="" width="16" height="16">Render</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/cloudflare.svg" alt="" width="16" height="16">Cloudflare (R2, Stream)</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/caddy.svg" alt="" width="16" height="16">Caddy SSL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/namecheap.svg" alt="" width="16" height="16">Namecheap API</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/github.svg)" aria-hidden="true"></span>Git / GitHub</li></ul>
+            <ul class="mini-chips"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/docker.svg" alt="" width="16" height="16">Docker</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/cloud.svg)" aria-hidden="true"></span>Oracle Cloud</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/render.svg" alt="" width="16" height="16">Render</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/cloudflare.svg" alt="" width="16" height="16">Cloudflare (R2, Stream)</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/caddy.svg" alt="" width="16" height="16">Caddy SSL</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/namecheap.svg" alt="" width="16" height="16">Namecheap API</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/github.svg)" aria-hidden="true"></span>Git / GitHub</li></ul>
           </article>
           <article class="tool-card">
             <h3 class="tool-title">Payments &amp; Services</h3>
-            <ul class="mini-chips"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/stripe.svg" alt="" width="16" height="16">Stripe</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/resend.svg)" aria-hidden="true"></span>Resend</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/google.svg" alt="" width="16" height="16">Google APIs</li></ul>
+            <ul class="mini-chips"><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/stripe.svg" alt="" width="16" height="16">Stripe</li><li class="mini-chip"><span class="mini-logo mini-logo-mono" style="--logo: url(/assets/images/logos/resend.svg)" aria-hidden="true"></span>Resend</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/brevo.svg" alt="" width="16" height="16">Brevo</li><li class="mini-chip"><img class="mini-logo" src="/assets/images/logos/google.svg" alt="" width="16" height="16">Google APIs</li></ul>
           </article>
           <article class="tool-card">
             <h3 class="tool-title">Other</h3>
@@ -484,7 +524,7 @@
     </div>
   </footer>
 
-  <script src="/js/i18n.js?v=c61e2fe16a"></script>
+  <script src="/js/i18n.js?v=4a70c8194f"></script>
   <script src="/js/main.js?v=02086d5171"></script>
 </body>
 </html>
