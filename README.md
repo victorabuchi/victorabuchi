@@ -28,31 +28,21 @@
 
 **Client work:** [Kuopas](https://kuopas.com), a booking system and phone app for student housing in Kuopio, and [Rannikon](https://victorabuchi.com/case-studies/rannikon/), the timesheet platform a berry farm runs on for 300+ seasonal workers in five languages.
 
-### A look inside
+### Statiku: analytics for any website
 
-<table>
-  <tr>
-    <td colspan="2"><a href="https://statiku.com"><img src="assets/images/showcase/statiku.webp" alt="Statiku's analytics for notchlight.com"></a><br><sub><b>Statiku:</b> the analytics for notchlight.com, Statiku's first customer</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><a href="https://pursecast.com"><img src="assets/images/showcase/pursecast.webp" alt="Pursecast's Money Weather forecast"></a><br><sub><b>Pursecast:</b> Money Weather, the balance forecast day by day</sub></td>
-    <td width="50%"><a href="https://slotnook.fi"><img src="assets/images/showcase/slotnook.webp" alt="A laundry booking calendar in Slotnook"></a><br><sub><b>Slotnook:</b> a laundry calendar under a housing organization's own brand</sub></td>
-  </tr>
-  <tr>
-    <td><a href="https://onshipy.com"><img src="assets/images/showcase/onshipy.webp" alt="Onshipy's listings with source price, selling price and profit"></a><br><sub><b>Onshipy:</b> listings with their source price, selling price and profit, pushed to Shopify</sub></td>
-    <td><a href="https://chronkeep.com"><img src="assets/images/showcase/chronkeep.webp" alt="ChronKeep's week view with a task list"></a><br><sub><b>ChronKeep:</b> the week's lectures and deadlines beside the tasks still to do</sub></td>
-  </tr>
-</table>
+<a href="https://statiku.com"><img src="assets/images/showcase/statiku.webp" alt="Statiku's dashboard: visitors, page views, bounce rate and visit duration, a chart of visitors over time and where the traffic comes from"></a>
+
+Add one small script to any website (or WordPress, Shopify, Wix, Squarespace, Webflow or Framer) and see every visitor the moment they arrive: where they came from, what they read, and what they click, download or buy. No cookies, nothing stored about the visitor, and the data stays in the EU. Mac and iPhone apps can report installs too.
+
+**[Try it free for 30 days at statiku.com](https://statiku.com)**
 
 ### Mac apps
 
 <table>
   <tr>
-    <td width="50%"><a href="https://notchlight.com"><img src="assets/images/projects/notchlight.png" width="40" align="left" alt="Notchlight"></a><b><a href="https://notchlight.com">Notchlight</a></b><br><sub>Widgets on the lock screen and a Dynamic Island around the notch</sub><br clear="left"><br><a href="https://notchlight.com"><img src="assets/images/showcase/notchlight.webp" alt="A Mac lock screen with Notchlight's widgets"></a></td>
-    <td width="50%"><a href="https://victorabuchi.github.io/macxray/"><img src="assets/images/projects/macxray.png" width="40" align="left" alt="MacXray"></a><b><a href="https://victorabuchi.github.io/macxray/">MacXray</a></b><br><sub>What your Mac is doing, live and in plain English</sub><br clear="left"><br><a href="https://victorabuchi.github.io/macxray/"><img src="assets/images/showcase/macxray.webp" alt="MacXray's Now view of a Mac's insides"></a></td>
-  </tr>
-  <tr>
-    <td colspan="2"><img src="assets/images/projects/snakebite.png" width="40" align="left" alt="Snake Bite"><b>Snake Bite</b><br><sub>Classic Snake in 3D, with ten new mechanics that unlock as your best score climbs</sub><br clear="left"><br><img src="assets/images/showcase/snakebite.webp" alt="Snake Bite's title screen beside a game in play on a 3D board"></td>
+    <td align="center" width="33%"><a href="https://notchlight.com"><img src="assets/images/projects/notchlight.png" width="56" alt="Notchlight"></a><br><b><a href="https://notchlight.com">Notchlight</a></b><br><sub>Widgets on the lock screen and a Dynamic Island around the notch</sub></td>
+    <td align="center" width="33%"><a href="https://victorabuchi.github.io/macxray/"><img src="assets/images/projects/macxray.png" width="56" alt="MacXray"></a><br><b><a href="https://victorabuchi.github.io/macxray/">MacXray</a></b><br><sub>What your Mac is doing, live and in plain English</sub></td>
+    <td align="center" width="33%"><img src="assets/images/projects/snakebite.png" width="56" alt="Snake Bite"><br><b>Snake Bite</b><br><sub>Classic Snake in 3D, with ten new mechanics</sub></td>
   </tr>
 </table>
 
