@@ -52,15 +52,6 @@
 
 Everything above runs on servers I set up and look after myself: Docker and Caddy on Oracle Cloud, deployed from GitHub, with nightly backups kept off the server.
 
-### Open source
-
-- [**dejsh**](https://github.com/victorabuchi/dejsh): déjà vu for your shell. It remembers how you fixed errors and turns what worked into scripts, in one bash script. `brew install victorabuchi/dejsh/dejsh`
-- [**MacXray**](https://github.com/victorabuchi/macxray): downloads and releases of the Mac app.
-- [**Notchlight**](https://github.com/victorabuchi/notchlight): downloads and releases of the Mac app.
-- [**victorabuchi**](https://github.com/victorabuchi/victorabuchi): the source of victorabuchi.com, in English and Finnish.
-
-### Now
-
 - Building Statiku and moving my apps onto servers I run myself.
 - Studying Computer Science at the University of Eastern Finland in Kuopio, and learning Finnish.
 - Open to part-time work during my studies and full-time in the summer.
