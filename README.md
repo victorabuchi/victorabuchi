@@ -32,7 +32,7 @@
 
 <a href="https://statiku.com"><img src="assets/images/showcase/statiku.webp" alt="Statiku's dashboard: visitors, page views, bounce rate and visit duration, a chart of visitors over time and where the traffic comes from"></a>
 
-Add one small script to any website (or WordPress, Shopify, Wix, Squarespace, Webflow or Framer) and see every visitor the moment they arrive: where they came from, what they read, and what they click, download or buy. No cookies, nothing stored about the visitor, and the data stays in the EU. Mac and iPhone apps can report installs too.
+Add one small script to any website (or WordPress, Shopify, Wix, Squarespace, Webflow or Framer) and see every visitor the moment they arrive: where they came from, what they read, and what they click and download. No cookies, no stored IP addresses, and the data stays in the EU. Mac and iPhone apps can report installs too.
 
 **[Try it free for 30 days at statiku.com](https://statiku.com)**
 
